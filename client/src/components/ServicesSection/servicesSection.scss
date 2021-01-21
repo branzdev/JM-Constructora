@@ -1,0 +1,44 @@
+@import '../../styles/index.scss';
+
+.services {
+	height: auto;
+	width: 100%;
+	position: relative;
+	background: transparent url(../../img/paperBackground.jpg) center/cover
+		no-repeat;
+	@extend %section-padding;
+	padding-top: 100px;
+	padding-bottom: 200px;
+
+	@include max-breakpoint('large') {
+		padding-bottom: 144px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: var(--color-tertiary);
+		opacity: 0.9;
+	}
+
+	.services__header-container {
+		position: relative;
+		z-index: 50;
+	}
+
+	.services__cards-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		position: relative;
+		z-index: 50;
+
+		@include max-breakpoint('large') {
+			flex-direction: column;
+		}
+	}
+}

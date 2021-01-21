@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import '../utilities/functions';
+
+/*                      ||    SASS Variables     ||                      */
+
+$font-size-html: 18px;
+
+/*                      ||    CSS Variables     ||                      */
+
+:root {
+	/* colors */
+	--color-body: #fdfdfd;
+	--color-primary: #2a56ac;
+	--color-primary-rgb: 42, 86, 172;
+	--color-secondary: #3a6ccf;
+	--color-secondary-rgb: 58, 108, 207;
+	--color-tertiary: #2c2c2c;
+	--color-tertiary-rgb: 44, 44, 44;
+	--color-quaternary: #d8d8d8;
+	--color-font__header1-dark: #4a4a4a7f;
+	--color-font__header1-light: #fafafab2;
+	--color-font__header2-dark: #4a4a4ab2;
+	--color-font__header2-light: #fafafae5;
+	--color-font__normal-dark: #4a4a4a;
+	--color-font__normal-dark-rgb: 74, 74, 74;
+	--color-font__normal-light: #fafafa;
+	--color-font__normal-light-rgb: 250, 250, 250;
+	/* fonts */
+	--font-header1: italic 700 #{rem(72px)} 'Bitter', serif;
+	--font-header2: 700 #{rem(36px)} 'Raleway', sans-serif;
+	--font-normal__raleway: #{rem(18px)}/ #{rem(40px)} 'Raleway', sans-serif;
+	--font-normal__raleway-bold: 700 #{rem(18px)}/ #{rem(40px)} 'Raleway',
+		sans-serif;
+	--font-normal__bitter: #{rem(18px)}/ #{rem(40px)} 'Bitter', serif;
+	--font-html: #{rem(18px)}/ #{rem(40px)} 'Raleway', sans-serif;
+	/* extras */
+	--border-radius: 8px;
+	--box-shadow: -5px 8px 8px #00000029;
+	--content-padding: 100px;
+}

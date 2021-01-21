@@ -1,0 +1,77 @@
+@import '../../styles/index.scss';
+
+.proyectsCard {
+	height: 576px;
+	width: 538px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	position: relative;
+	margin-right: 110px;
+	display: inline-block;
+	white-space: normal;
+
+	&:last-child {
+		margin-right: 0;
+		color: red;
+	}
+
+	@include max-breakpoint('large') {
+		height: 476px;
+		width: 438px;
+	}
+
+	&::before {
+		content: '';
+		background: transparent url('../../img/paperBackground.jpg') center/cover
+			no-repeat;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		border-radius: var(--border-radius);
+		opacity: 0.4;
+	}
+	.proyectsCard__image {
+		width: 308px;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		object-position: center;
+		display: flex;
+		position: absolute;
+		right: 0;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+	}
+	.proyectsCard__text-container {
+		height: 171px;
+		width: 348px;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 56px;
+		background: transparent
+			linear-gradient(
+				90deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%
+			)
+			center/cover no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		backdrop-filter: blur(7px);
+		-webkit-backdrop-filter: blur(7px);
+	}
+
+	.proyectsCard__tex {
+		max-width: 222px;
+		font: var(--font-normal__raleway);
+		color: var(--color-font__normal-light);
+		text-align: center;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,25 @@
+@import '../../styles/index.scss';
+
+.scrollProgressBar {
+	position: fixed;
+	display: block;
+	margin-bottom: 10px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	height: 4px;
+	background: transparent
+		linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%)
+		left/300% no-repeat;
+	z-index: 1000;
+	animation: scroll-progress-bar-animation 3s infinite alternate;
+	animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 0.5, 0.1);
+
+	@keyframes scroll-progress-bar-animation {
+		from {
+			background-position: left;
+		}
+		to {
+			background-position: right;
+		}
+	}
+}

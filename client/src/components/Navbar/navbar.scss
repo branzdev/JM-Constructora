@@ -1,0 +1,60 @@
+@import '../../styles/index.scss';
+
+.navbar {
+	position: fixed;
+	font: var(--font-normal__bitter);
+	color: var(--color-font__normal-dark);
+	height: 100px;
+	width: 100vw;
+	background: transparent
+		linear-gradient(90deg, #fafafa 0%, #fafafa 28%, #fafafab3 100%) 0% 0%;
+	box-shadow: var(--box-shadow);
+	z-index: 100;
+
+	.navbar__list {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		align-items: center;
+
+		.navbar__list-item:nth-child(2) {
+			margin-left: 142px;
+		}
+
+		.navbar__list-item-link {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.navbar__list-item-link--logo {
+			display: inline-block;
+			height: 56.73px;
+			width: 208.82px;
+			position: absolute;
+			right: 100px;
+			bottom: 50%;
+			transform: translateY(50%);
+
+			@include max-breakpoint('xlarge') {
+				right: 50px;
+			}
+		}
+
+		.navbar__list-item-link-image {
+			height: 100%;
+			width: 100%;
+		}
+
+		@include max-breakpoint('xlarge') {
+			.navbar__list-item:nth-child(1) {
+				display: none;
+			}
+			.navbar__list-item:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+@import '../../styles/index.scss';
+
+.servicesPage {
+	position: relative;
+	margin-bottom: 200px;
+
+	.servicesPage__top-content-container {
+		padding: 230px 0 0 0;
+		position: relative;
+		margin-bottom: 100px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			background: transparent url(../../img/servicesPageTopBackground.jpg)
+				center/cover no-repeat;
+			opacity: 0.1;
+		}
+	}
+
+	.servicesPage__header-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 80px;
+		position: relative;
+		padding: 0;
+	}
+
+	.servicesPage__header2 {
+		transform: translate(0, 0);
+	}
+
+	.servicesPage__section-selector-container {
+		width: 100%;
+		font: var(--font-normal__raleway);
+		color: var(--color-font__normal-dark);
+		border-bottom: 1px solid var(--color-tertiary);
+		display: flex;
+		justify-content: center;
+	}
+
+	.servicesPage__section-selector {
+		border: 1px solid var(--color-tertiary);
+		transform-origin: center bottom;
+		background-color: var(--color-secondary);
+		@extend %disable-select;
+		border-bottom: none;
+		position: relative;
+
+		.servicesPage__section-selector-link {
+			display: block;
+			cursor: pointer;
+			padding: 10px 15px;
+			color: var(--color-font__normal-light);
+			text-decoration: none;
+			transform: scaleY(inherit);
+		}
+
+		.servicesPage__section-selector-link--active::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 15px;
+			top: -10%;
+			left: 0;
+			background-color: transparent;
+		}
+
+		&:nth-child(1) {
+			border-radius: var(--border-radius) 0 0 0;
+		}
+
+		&:nth-child(2) {
+			border-radius: 0 var(--border-radius) 0 0;
+		}
+	}
+
+	.servicesPage__section-selector-selected {
+		position: relative;
+		color: var(--color-primary);
+		background-color: var(--color-body);
+
+		.servicesPage__section-selector-link {
+			color: var(--color-primary);
+			height: 60px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 15px;
+			width: 100%;
+			top: 97%;
+			left: 0;
+			background-color: var(--color-body);
+		}
+	}
+}

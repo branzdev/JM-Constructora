@@ -1,0 +1,52 @@
+@import '../utilities/functions';
+
+@mixin max-breakpoint($breakpoint) {
+	$breakpoints: (
+		xsmall: rem(480px),
+		small: rem(640px),
+		medium: rem(768px),
+		large: rem(1024px),
+		xlarge: rem(1392px),
+		xxlarge: rem(1530px),
+	);
+
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else {
+		@media screen and (max-width: rem($breakpoint)) {
+			@content;
+		}
+	}
+}
+
+@mixin placeholderStyle($style, $value) {
+	&::-webkit-input-placeholder {
+		/* WebKit, Blink, Edge */
+		#{$style}: $value;
+	}
+	&:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		#{$style}: $value;
+		opacity: 1; //fix Mozilla opacity
+	}
+	&::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		#{$style}: $value;
+		opacity: 1; //fix Mozilla opacity
+	}
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		#{$style}: $value;
+	}
+	&::-ms-input-placeholder {
+		/* Microsoft Edge */
+		#{$style}: $value;
+	}
+
+	&::placeholder {
+		/* Most modern browsers support this now. */
+		#{$style}: $value;
+	}
+}

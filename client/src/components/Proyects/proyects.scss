@@ -1,0 +1,97 @@
+@import '../../styles/index.scss';
+
+.proyects {
+	width: 100%;
+	position: relative;
+	@extend %section-padding;
+	@extend %scroll-margin;
+
+	.proyects__cards-container {
+		height: calc(576px + 30px);
+		white-space: nowrap;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		padding: 0 0 0 15px;
+		-ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+		scrollbar-width: none; /* Hide scrollbar for Firefox */
+		position: relative;
+		transition: all 0.2s ease-in-out;
+		margin-bottom: 20px;
+
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		// &:hover::after {
+		// 	content: 'Arrastra de izquierda a derecha para ver todos los proyectos';
+		// 	position: absolute;
+		// 	top: -10px;
+		// 	left: 50%;
+		// 	transform: translateX(-50%);
+		// 	z-index: 100000;
+		// 	overflow: visible;
+		// }
+
+		&.active {
+			cursor: grabbing;
+			cursor: -webkit-grabbing;
+			transform: scale(1.01);
+		}
+
+		@include max-breakpoint('xlarge') {
+			height: calc(476px + 30px);
+		}
+	}
+
+	.proyects__slider {
+		height: 29px;
+		width: 500px;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+		background-color: var(--color-font__normal-light);
+		border: 1px solid rgba(var(--color-tertiary-rgb), 0.1);
+		position: relative;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		padding: 0 20px;
+
+		@include max-breakpoint('large') {
+			display: none;
+		}
+	}
+
+	.proyects__slider-bar-control {
+		height: 100%;
+		width: 100%;
+		background-color: transparent;
+		border: 1px solid rgba(var(--color-tertiary-rgb), 0.3);
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	.proyects__slider-bar-control-lines-container {
+		height: 42px;
+		width: 100%;
+	}
+	.proyects__slider-bar-control-line {
+		width: 100%;
+		border: 1px solid rgba(var(--color-tertiary-rgb), 0.3);
+		margin-top: 9px;
+	}
+	.proyects__slider-bar {
+		height: 100%;
+		width: 25%;
+		background: transparent
+			linear-gradient(
+				90deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%
+			)
+			center/cover no-repeat;
+		border-radius: var(--border-radius) 0 0 var(--border-radius);
+	}
+}

@@ -1,0 +1,246 @@
+@import '../../styles/index.scss';
+
+.servicesCard {
+	height: 365px;
+	width: 464px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	position: relative;
+	transition: all 0.3s ease-out;
+	@extend %disable-select;
+
+	@include max-breakpoint('xxlarge') {
+		height: 300px;
+		width: 399px;
+	}
+
+	@include max-breakpoint('large') {
+		&:nth-child(1) {
+			margin-right: auto;
+			.servicesCard__text-container {
+				transform: translate(20%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					right: 0;
+					top: 50%;
+					transform: translate(75%, -50%);
+
+					&:active {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+
+					&:focus {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+
+					&:target {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			margin-left: auto;
+			margin-top: 150px;
+
+			.servicesCard__text-container {
+				left: 0;
+				transform: translate(-20%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					top: 50%;
+					transform: translate(-75%, -50%);
+
+					&:active {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+
+					&:focus {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+
+					&:target {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+				}
+			}
+		}
+	}
+
+	&:hover {
+		transform: scale(1.05);
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(var(--color-tertiary-rgb), 0.9);
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
+			//animation: 0.3s forwards fadeInDown ease-out;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 44px;
+			width: 337px;
+		}
+
+		.servicesCard__text-container {
+			right: 50%;
+			transform: translate(50%, 150%);
+			cursor: pointer;
+			animation: 0.3s forwards enablePointerEvents;
+
+			&:hover {
+				background: var(--color-body);
+			}
+
+			&:active {
+				right: 50%;
+				transform: translate(50%, 150%) scale(0.9);
+			}
+
+			&:focus {
+				right: 50%;
+				transform: translate(50%, 150%) scale(0.9);
+			}
+
+			&:target {
+				right: 50%;
+				transform: translate(50%, 150%) scale(0.9);
+			}
+		}
+
+		.servicesCard__hoverText {
+			animation: 0.3s forwards fadeIn ease;
+		}
+
+		.servicesCard__text-container::after,
+		.servicesCard__text-container:hover::after {
+			content: 'Más Info';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font: var(--font-normal__raleway);
+			text-transform: uppercase;
+			max-width: 120px;
+			text-align: center;
+			animation: 0.3s forwards fadeIn ease;
+		}
+
+		.servicesCard__text-container::after {
+			color: var(--color-font__normal-light);
+		}
+		.servicesCard__text-container:hover::after {
+			color: var(--color-font__normal-dark);
+		}
+
+		.servicesCard__text {
+			animation: 0.3s forwards fadeOut ease;
+		}
+	}
+
+	.servicesCard__image {
+		height: 100%;
+		width: 100%;
+		display: block;
+		object-fit: cover;
+		object-position: center;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+	}
+
+	.servicesCard__text-container {
+		height: 88px;
+		width: 337px;
+		border-radius: var(--border-radius);
+		box-shadow: var(--box-shadow);
+		background: transparent
+			linear-gradient(
+				180deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%
+			)
+			center/cover no-repeat;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: translate(34px, 50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease-out;
+		pointer-events: none;
+	}
+
+	.servicesCard__text,
+	.servicesCard__hoverText {
+		font: var(--font-normal__raleway);
+		color: var(--color-font__normal-light);
+		text-transform: uppercase;
+		max-width: 200px;
+		text-align: center;
+	}
+
+	.servicesCard__hoverText {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeOut {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fadeInDown {
+		from {
+			transform: scaleY(0);
+		}
+		to {
+			transform: scaleY(1);
+		}
+	}
+
+	@keyframes enablePointerEvents {
+		from {
+			pointer-events: none;
+		}
+		to {
+			pointer-events: all;
+		}
+	}
+}

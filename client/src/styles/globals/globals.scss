@@ -1,0 +1,84 @@
+@import '../utilities/extensions';
+
+.section {
+	margin-bottom: 100px;
+}
+
+.header1 {
+	font: var(--font-header1);
+	display: inline-block;
+	position: relative;
+	@extend %disable-select;
+}
+
+.header1--dark {
+	color: var(--color-font__header1-dark);
+}
+
+.header1--light {
+	color: var(--color-font__header1-light);
+}
+
+.header-container {
+	margin-bottom: 80px;
+	height: 116px;
+}
+
+.header2 {
+	font: var(--font-header2);
+	display: inline-block;
+	position: relative;
+	transform: translate(-50%, 100%);
+	@extend %disable-select;
+}
+
+.header2--dark {
+	color: var(--color-font__header2-dark);
+}
+
+.header2--light {
+	color: var(--color-font__header2-light);
+}
+
+/* ----- Sweet Alert 2 Custom Styles ---- */
+
+//Alert
+
+.sweet-alert2__container {
+	background: rgba(var(--color-tertiary-rgb), 0.8) !important;
+	font: var(--font-normal__raleway) !important;
+	border-radius: var(--border-radius) !important;
+
+	.sweet-alert2__popup {
+		background: var(--color-body) !important;
+		border-radius: inherit !important;
+	}
+	/* 
+	.sweet-alert2__title {
+	}
+ 	*/
+	.sweet-alert2__confirm-button {
+		background: var(--color-secondary) !important;
+		border-radius: var(--border-radius) !important;
+	}
+}
+
+//Toast
+
+.sweet-alert2__container-toast {
+	font: var(--font-normal__raleway) !important;
+	border-radius: var(--border-radius) !important;
+
+	.sweet-alert2__popup-toast {
+		background: var(--color-body) !important;
+		border-radius: inherit !important;
+	}
+
+	.sweet-alert2__title-toast {
+	}
+
+	.sweet-alert2__confirm-button-toast {
+		background: var(--color-secondary) !important;
+		border-radius: var(--border-radius) !important;
+	}
+}

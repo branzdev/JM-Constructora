@@ -1,0 +1,7 @@
+@import '../../styles/index.scss';
+
+.contact {
+	@extend %section-padding;
+	@extend %scroll-margin;
+	margin-bottom: 200px;
+}

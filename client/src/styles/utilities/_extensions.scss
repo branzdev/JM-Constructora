@@ -1,0 +1,24 @@
+@import '../utilities/mixins';
+
+%disable-select {
+	user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+%scroll-margin {
+	padding-top: 125px;
+	margin-top: -125px;
+}
+
+%section-padding {
+	padding-left: var(--content-padding);
+	padding-right: var(--content-padding);
+
+	@include max-breakpoint('xlarge') {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}

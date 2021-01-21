@@ -1,0 +1,24 @@
+@import '../../styles/index.scss';
+
+.button {
+	padding: 22px 60px;
+	font: var(--font-normal__raleway);
+	text-transform: uppercase;
+	box-shadow: var(--box-shadow);
+	border-radius: var(--border-radius);
+	position: relative;
+	z-index: 1000;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	@extend %disable-select;
+}
+
+.button--primary {
+	background: var(--color-body);
+}
+
+.button--primary:hover {
+	background: var(--color-secondary);
+	color: var(--color-font__normal-light);
+}

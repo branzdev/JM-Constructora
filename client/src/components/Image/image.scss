@@ -1,0 +1,16 @@
+@import '../../styles/index.scss';
+.image-container {
+	overflow: hidden;
+
+	.image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		transition: all 0.3s ease;
+
+		&:hover {
+			transform: scale(1.1) rotate(1deg);
+		}
+	}
+}
