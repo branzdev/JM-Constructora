@@ -6,10 +6,8 @@ const dotenv = require('dotenv').config();
 router.post('/', async function (req, res, next) {
 	const { name, phone, email, subject, message } = req.body;
 
-	console.log('testing------: ' + process.env.EMAIL_SENDER_EMAIL);
-
 	const htmlBody = `
-	<h1> Test Mail </h1>
+	<h1> ${subject ? subject : 'Cotización de Servicio'} </h1>
 	<ul>
 		<li>
 			Nombre: ${name}
@@ -20,7 +18,7 @@ router.post('/', async function (req, res, next) {
 		${phone && `<li>Teléfono: ${phone}</li>`}
 	</ul>
 	<p>${message}</p>
-	<a href="mailto:${email}">Responder</a>
+	<a style="background: #2a56ac; color: #fafafa; text-decoration: none; padding: 15px; border-radius: 8px; display: inline-block; margin-top: 15px;" href="mailto:${email}">Responder</a>
 	`;
 
 	// create reusable transporter object using the default SMTP transport
@@ -45,7 +43,7 @@ router.post('/', async function (req, res, next) {
 	let mail = {
 		from: process.env.EMAIL_FROM, // sender address
 		to: process.env.EMAIL_DESTINATION, // list of receivers
-		subject: `${subject ? subject : 'Solicitud de Servicio'}`, // Subject line
+		subject: `${subject ? subject : 'Cotización de Servicio'}`, // Subject line
 		html: htmlBody, // html body
 	};
 

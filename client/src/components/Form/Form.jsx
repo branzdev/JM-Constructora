@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 //styles
@@ -12,6 +12,7 @@ export default function Form(props) {
 		email: '',
 		subject: '',
 		message: '',
+		phone: '',
 	};
 
 	const defaultIsRequired = {
@@ -19,7 +20,17 @@ export default function Form(props) {
 		emailRequired: '',
 		subjectRequired: '',
 		messageRequired: '',
+		phoneRequired: '',
 	};
+
+	const [isLocatedServices, setIsLocatedServices] = useState();
+	const [location, setLocation] = useState('');
+
+	useEffect(() => {
+		setLocation(props.location);
+
+		location === 'services' && setIsLocatedServices(true);
+	}, [props.location, location]);
 
 	const [formData, setFormData] = useState(defaultFormData);
 
@@ -30,9 +41,10 @@ export default function Form(props) {
 		emailRequired,
 		subjectRequired,
 		messageRequired,
+		phoneRequired,
 	} = isRequired;
 
-	const { name, email, subject, message } = formData;
+	const { name, email, subject, message, phone } = formData;
 
 	const resetForm = () => {
 		setFormData(defaultFormData);
@@ -45,14 +57,19 @@ export default function Form(props) {
 				[`${key}Required`]: 'form__input-required',
 			}));
 		} else {
-			setIsRequired(defaultIsRequired);
+			setIsRequired((prevState) => ({
+				...prevState,
+				[`${key}Required`]: '',
+			}));
 		}
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		const formIsFilled = (name && email && subject && message) !== '';
+		const formIsFilled = isLocatedServices
+			? (name && email && phone && message) !== ''
+			: (name && email && subject && message) !== '';
 
 		if (formIsFilled) {
 			setIsRequired(defaultIsRequired);
@@ -66,9 +83,11 @@ export default function Form(props) {
 					if (response.data.status === 'success') {
 						Swal.fire({
 							title: 'Gracias!',
-							text: 'Mensaje Enviado Correctamente.',
+							text: isLocatedServices
+								? 'Solicitud enviada correctamente, nos pondremos en contacto contigo lo antes posible.'
+								: 'Mensaje Enviado Correctamente.',
 							icon: 'success',
-							timer: 2000,
+							timer: isLocatedServices ? 0 : 2000,
 							customClass: {
 								container: 'sweet-alert2__container',
 								popup: 'sweet-alert2__popup',
@@ -175,19 +194,29 @@ export default function Form(props) {
 					<input
 						onChange={handleOnChange}
 						type="text"
-						className={`form__input form__input--subject ${subjectRequired}`}
-						placeholder="Asunto"
-						name="subject"
-						value={subject}
+						className={`form__input form__input--subject ${
+							isLocatedServices ? phoneRequired : subjectRequired
+						}`}
+						placeholder={isLocatedServices ? 'Teléfono' : 'Asunto'}
+						name={isLocatedServices ? 'phone' : 'subject'}
+						value={isLocatedServices ? phone : subject}
 						required
 					/>
-					<div className={`form__input-line ${subjectRequired}`}></div>
+					<div
+						className={`form__input-line ${
+							isLocatedServices ? phoneRequired : subjectRequired
+						}`}
+					></div>
 				</div>
 				<div className="form__input-container">
 					<textarea
 						onChange={handleOnChange}
 						className={`form__input form__textArea ${messageRequired}`}
-						placeholder="En que podemos ayudarte..."
+						placeholder={
+							isLocatedServices
+								? 'Descripción de la solicitud...'
+								: 'En que podemos ayudarte...'
+						}
 						name="message"
 						value={message}
 						required

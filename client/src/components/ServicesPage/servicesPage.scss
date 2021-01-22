@@ -9,6 +9,10 @@
 		position: relative;
 		margin-bottom: 100px;
 
+		@include max-breakpoint('small') {
+			padding: 130px 0 0 0;
+		}
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -31,6 +35,10 @@
 		margin-bottom: 80px;
 		position: relative;
 		padding: 0;
+
+		@include max-breakpoint('xsmall') {
+			margin-bottom: 50px;
+		}
 	}
 
 	.servicesPage__header2 {
@@ -61,6 +69,11 @@
 			color: var(--color-font__normal-light);
 			text-decoration: none;
 			transform: scaleY(inherit);
+			text-align: center;
+
+			@include max-breakpoint('small') {
+				padding: 10px 10px;
+			}
 		}
 
 		.servicesPage__section-selector-link--active::before {

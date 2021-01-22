@@ -19,6 +19,12 @@
 
 		@include max-breakpoint('large') {
 			width: 100%;
+			padding: 40px 0;
+			margin-bottom: 0;
+		}
+
+		@include max-breakpoint('xsmall') {
+			padding: 20px 0;
 		}
 	}
 

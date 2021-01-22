@@ -11,6 +11,10 @@
 	box-shadow: var(--box-shadow);
 	z-index: 100;
 
+	@include max-breakpoint('small') {
+		height: 70px;
+	}
+
 	.navbar__list {
 		position: relative;
 		height: 100%;
@@ -37,9 +41,29 @@
 			right: 100px;
 			bottom: 50%;
 			transform: translateY(50%);
+			background: transparent url(../../img/logoMinimal.svg) center/cover
+				no-repeat;
+			object-fit: cover;
+			object-position: center;
 
 			@include max-breakpoint('xlarge') {
 				right: 50px;
+			}
+
+			@include max-breakpoint('small') {
+				right: 25px;
+			}
+
+			@include max-breakpoint('medium') {
+				background: transparent url(../../img/logoSmall.svg) center/cover
+					no-repeat;
+				height: 80px;
+				width: 80px;
+			}
+
+			@include max-breakpoint('small') {
+				height: 60px;
+				width: 60px;
 			}
 		}
 

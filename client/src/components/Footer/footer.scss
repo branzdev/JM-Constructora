@@ -10,6 +10,10 @@
 		height: 700px;
 	}
 
+	@include max-breakpoint('small') {
+		height: 930px;
+	}
+
 	.footer__socials-container {
 		position: absolute;
 		left: 100px;
@@ -37,16 +41,38 @@
 			transform: translate(-50%, -50%);
 		}
 
+		@include max-breakpoint('small') {
+			width: 450px;
+		}
+
+		@include max-breakpoint('xsmall') {
+			height: 60px;
+			width: calc(100% - 50px);
+			padding: 0 25px;
+		}
+
 		.footer__socials-text {
 			margin-right: 70px;
+
+			@include max-breakpoint('small') {
+				margin-right: 0;
+			}
 		}
 
 		.footer__socials-link {
 			height: 32px;
 			width: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			&:hover {
 				transform: scale(1.3);
+			}
+
+			@include max-breakpoint('xsmall') {
+				height: 24px;
+				width: 24px;
 			}
 		}
 
@@ -55,6 +81,14 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
+
+			@include max-breakpoint('small') {
+				margin-right: 15px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 
@@ -116,36 +150,23 @@
 				padding: 0 50px;
 			}
 
+			@include max-breakpoint('small') {
+				row-gap: 15px;
+				padding: 0 15px;
+			}
+
 			.footer__content-sitemap-item {
 				font: var(--font-normal__raleway-bold);
 				color: var(--color-font__normal-light);
 				position: relative;
-				left: 50%;
-				transform: translateX(-25%);
+				top: 0;
 
-				@include max-breakpoint('xlarge') {
-					left: 0;
-					transform: translateX(0);
+				@include max-breakpoint('small') {
+					max-width: 248px;
 				}
 
-				@include max-breakpoint('large') {
-					left: 15%;
-				}
-
-				&::before {
-					content: '';
-					height: 10px;
-					width: 10px;
-					border-radius: 50%;
-					background: transparent
-						linear-gradient(
-							180deg,
-							var(--color-primary) 0%,
-							var(--color-secondary) 100%
-						)
-						center/cover no-repeat;
-					display: inline-block;
-					transform: translateX(-30px);
+				@include max-breakpoint('xsmall') {
+					max-width: 134px;
 				}
 
 				&:nth-child(1) {
@@ -182,11 +203,6 @@
 				}
 
 				@include max-breakpoint('large') {
-					&::before {
-						transform: translateX(0);
-						margin-right: 30px;
-					}
-
 					&:nth-child(1) {
 						grid-column: 1/2;
 						grid-row: 1/2;
@@ -229,9 +245,46 @@
 			.footer__content-sitemap-item-link {
 				text-decoration: none;
 				color: inherit;
+				position: relative;
+				left: 25%;
+
+				&::before {
+					content: '';
+					height: 10px;
+					width: 10px;
+					border-radius: 50%;
+					background: transparent
+						linear-gradient(
+							180deg,
+							var(--color-primary) 0%,
+							var(--color-secondary) 100%
+						)
+						center/cover no-repeat;
+					display: inline-block;
+					position: absolute;
+					top: 7px;
+					transform: translate(-30px, 0);
+				}
 
 				&:hover {
 					color: var(--color-secondary);
+				}
+
+				@include max-breakpoint('xlarge') {
+					left: 0;
+					transform: translateX(0);
+				}
+
+				@include max-breakpoint('large') {
+					left: 30%;
+				}
+
+				@include max-breakpoint('medium') {
+					left: 15%;
+				}
+
+				@include max-breakpoint('xsmall') {
+					left: 35%;
 				}
 			}
 		}
@@ -306,6 +359,16 @@
 			grid-template-columns: repeat(2, auto);
 		}
 
+		@include max-breakpoint('large') {
+			column-gap: 0;
+		}
+
+		@include max-breakpoint('small') {
+			grid-template-rows: 50px repeat(3, 1fr);
+			grid-template-columns: 1fr;
+			bottom: 0;
+		}
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -345,6 +408,7 @@
 			grid-template-rows: repeat(2, auto);
 			text-align: center;
 			max-width: 356px;
+			padding: 10px;
 
 			@include max-breakpoint('large') {
 				grid-template-columns: 1fr;
@@ -393,6 +457,7 @@
 			text-decoration: none;
 			color: inherit;
 			margin: 0 0 0 15px;
+			padding: 0 10px;
 
 			@include max-breakpoint('xlarge') {
 				margin: 0;

@@ -21,4 +21,9 @@
 		padding-left: 50px;
 		padding-right: 50px;
 	}
+
+	@include max-breakpoint('small') {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 }

@@ -74,7 +74,7 @@ export default function Proyects() {
 				/>
 				<ProyectsCard
 					image={proyect1__image}
-					text="Suministro, Acarreo y Colocación de Base"
+					text="Suministro, Acarreo y Colocación de Carpeta Asfáltica"
 				/>
 				<ProyectsCard
 					image={proyect1__image}

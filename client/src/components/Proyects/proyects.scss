@@ -6,6 +6,11 @@
 	@extend %section-padding;
 	@extend %scroll-margin;
 
+	@include max-breakpoint('small') {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.proyects__cards-container {
 		height: calc(576px + 30px);
 		white-space: nowrap;
@@ -42,6 +47,21 @@
 		@include max-breakpoint('xlarge') {
 			height: calc(476px + 30px);
 		}
+
+		@include max-breakpoint('medium') {
+			height: calc(426px + 30px);
+		}
+
+		@include max-breakpoint('small') {
+			width: 100%;
+			height: 450px;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		@include max-breakpoint('xsmall') {
+			height: 370px;
+		}
 	}
 
 	.proyects__slider {
@@ -59,7 +79,7 @@
 		align-items: center;
 		padding: 0 20px;
 
-		@include max-breakpoint('large') {
+		@include max-breakpoint('small') {
 			display: none;
 		}
 	}

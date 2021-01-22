@@ -91,7 +91,7 @@ export default function Home() {
 				<Button
 					onClick={handleOnClick}
 					className="home__items-button button--primary"
-					text="Acerca de Nosotros"
+					text="Nuestros Servicios"
 				/>
 			</div>
 			<div ref={homeIntroContainerRef} className="home__intro-container">

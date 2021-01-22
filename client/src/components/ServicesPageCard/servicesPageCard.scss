@@ -6,6 +6,7 @@
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
 	display: inline-grid;
+	grid-template-rows: repeat(2, 1fr);
 	place-items: center;
 	position: relative;
 	font: var(--font-normal__raleway);
@@ -14,7 +15,37 @@
 	cursor: pointer;
 	text-decoration: none;
 
+	@include max-breakpoint('large') {
+		height: 250px;
+		width: 300px;
+	}
+
+	@include max-breakpoint('medium') {
+		height: 300px;
+		width: 350px;
+		margin-bottom: 50px;
+
+		&:last-child() {
+			margin-bottom: 0;
+		}
+	}
+
+	@include max-breakpoint('xsmall') {
+		height: 200px;
+		width: 250px;
+
+		&:first-child() {
+			.servicesPageCard__text-container {
+				transform: translateY(19%);
+			}
+		}
+	}
+
 	&:hover {
+		@include max-breakpoint('xsmall') {
+			height: 250px;
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -43,6 +74,19 @@
 		height: 200px;
 		transition: inherit;
 		@extend %disable-select;
+		grid-row: 1/2;
+
+		@include max-breakpoint('large') {
+			height: 150px;
+		}
+
+		@include max-breakpoint('medium') {
+			height: 200px;
+		}
+
+		@include max-breakpoint('xsmall') {
+			max-height: 100px;
+		}
 	}
 
 	.servicesPageCard__text-container {
@@ -50,8 +94,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		transform: translateY(56%);
+		transform: translateY(64%);
 		transition: inherit;
+		grid-row: 2/3;
 	}
 
 	.servicesPageCard__text {

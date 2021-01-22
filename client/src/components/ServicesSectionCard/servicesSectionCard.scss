@@ -9,74 +9,6 @@
 	transition: all 0.3s ease-out;
 	@extend %disable-select;
 
-	@include max-breakpoint('xxlarge') {
-		height: 300px;
-		width: 399px;
-	}
-
-	@include max-breakpoint('large') {
-		&:nth-child(1) {
-			margin-right: auto;
-			.servicesCard__text-container {
-				transform: translate(20%, 50%);
-			}
-
-			&:hover {
-				.servicesCard__text-container {
-					right: 0;
-					top: 50%;
-					transform: translate(75%, -50%);
-
-					&:active {
-						top: 50%;
-						transform: translate(75%, -50%) scale(0.9);
-					}
-
-					&:focus {
-						top: 50%;
-						transform: translate(75%, -50%) scale(0.9);
-					}
-
-					&:target {
-						top: 50%;
-						transform: translate(75%, -50%) scale(0.9);
-					}
-				}
-			}
-		}
-		&:nth-child(2) {
-			margin-left: auto;
-			margin-top: 150px;
-
-			.servicesCard__text-container {
-				left: 0;
-				transform: translate(-20%, 50%);
-			}
-
-			&:hover {
-				.servicesCard__text-container {
-					top: 50%;
-					transform: translate(-75%, -50%);
-
-					&:active {
-						top: 50%;
-						transform: translate(-75%, -50%) scale(0.9);
-					}
-
-					&:focus {
-						top: 50%;
-						transform: translate(-75%, -50%) scale(0.9);
-					}
-
-					&:target {
-						top: 50%;
-						transform: translate(-75%, -50%) scale(0.9);
-					}
-				}
-			}
-		}
-	}
-
 	&:hover {
 		transform: scale(1.05);
 
@@ -158,6 +90,191 @@
 		}
 	}
 
+	@include max-breakpoint('xxlarge') {
+		height: 300px;
+		width: 399px;
+	}
+
+	@include max-breakpoint('large') {
+		&:nth-child(1) {
+			margin-right: auto;
+			.servicesCard__text-container {
+				transform: translate(20%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					right: 0;
+					top: 50%;
+					transform: translate(75%, -50%);
+
+					&:active {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+
+					&:focus {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+
+					&:target {
+						top: 50%;
+						transform: translate(75%, -50%) scale(0.9);
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			margin-left: auto;
+			margin-top: 150px;
+
+			.servicesCard__text-container {
+				left: 0;
+				transform: translate(-20%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					top: 50%;
+					transform: translate(-75%, -50%);
+
+					&:active {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+
+					&:focus {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+
+					&:target {
+						top: 50%;
+						transform: translate(-75%, -50%) scale(0.9);
+					}
+				}
+			}
+		}
+	}
+
+	@include max-breakpoint('medium') {
+		&:nth-child(1) {
+			&:hover {
+				.servicesCard__text-container {
+					top: unset;
+					transform: translate(40%, 50%);
+
+					&:active {
+						top: unset;
+						transform: translate(40%, 50%) scale(0.9);
+					}
+
+					&:focus {
+						top: unset;
+						transform: translate(40%, 50%) scale(0.9);
+					}
+
+					&:target {
+						top: unset;
+						transform: translate(40%, 50%) scale(0.9);
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			&:hover {
+				.servicesCard__text-container {
+					top: unset;
+					transform: translate(-40%, 50%);
+
+					&:active {
+						top: unset;
+						transform: translate(-40%, 50%) scale(0.9);
+					}
+
+					&:focus {
+						top: unset;
+						transform: translate(-40%, 50%) scale(0.9);
+					}
+
+					&:target {
+						top: unset;
+						transform: translate(-40%, 50%) scale(0.9);
+					}
+				}
+			}
+		}
+	}
+
+	@include max-breakpoint('small') {
+		&:nth-child(1) {
+			margin-left: auto;
+			margin-right: auto;
+			.servicesCard__text-container {
+				right: 50%;
+				transform: translate(50%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					right: 50%;
+					transform: translate(50%, 85%);
+
+					&:active {
+						right: 50%;
+						transform: translate(50%, 85%) scale(0.9);
+					}
+
+					&:focus {
+						right: 50%;
+						transform: translate(50%, 85%) scale(0.9);
+					}
+
+					&:target {
+						right: 50%;
+						transform: translate(50%, 85%) scale(0.9);
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			margin-left: auto;
+			margin-right: auto;
+			.servicesCard__text-container {
+				left: 50%;
+				transform: translate(-50%, 50%);
+			}
+
+			&:hover {
+				.servicesCard__text-container {
+					left: 50%;
+					transform: translate(-50%, 85%);
+
+					&:active {
+						left: 50%;
+						transform: translate(-50%, 85%) scale(0.9);
+					}
+
+					&:focus {
+						left: 50%;
+						transform: translate(-50%, 85%) scale(0.9);
+					}
+
+					&:target {
+						left: 50%;
+						transform: translate(-50%, 85%) scale(0.9);
+					}
+				}
+			}
+		}
+	}
+
+	@include max-breakpoint('xsmall') {
+		height: 250px;
+		width: 250px;
+	}
+
 	.servicesCard__image {
 		height: 100%;
 		width: 100%;
@@ -189,6 +306,12 @@
 		align-items: center;
 		transition: all 0.3s ease-out;
 		pointer-events: none;
+
+		@include max-breakpoint('xsmall') {
+			padding: 10px;
+			height: 78px;
+			width: calc(100% - 50px);
+		}
 	}
 
 	.servicesCard__text,

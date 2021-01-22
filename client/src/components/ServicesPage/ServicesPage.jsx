@@ -5,7 +5,7 @@ import { Route, Link, useLocation } from 'react-router-dom';
 //styles
 import './servicesPage.scss';
 //components
-import ServicesPageForm from '../ServicesPageForm/ServicesPageForm';
+import Form from '../Form/Form';
 import RentalServices from '../RentalServices/RentalServices';
 import ConstructionServices from '../ConstructionServices/ConstructionServices';
 
@@ -101,7 +101,7 @@ export default function ServicesPage() {
 					Servicio
 				</h2>
 			</div>
-			<ServicesPageForm />
+			<Form location="services" />
 		</div>
 	);
 }

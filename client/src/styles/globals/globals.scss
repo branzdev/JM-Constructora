@@ -6,9 +6,13 @@
 
 .header1 {
 	font: var(--font-header1);
+
 	display: inline-block;
 	position: relative;
 	@extend %disable-select;
+	@include max-breakpoint('small') {
+		font-size: rem(54px);
+	}
 }
 
 .header1--dark {
@@ -22,6 +26,17 @@
 .header-container {
 	margin-bottom: 80px;
 	height: 116px;
+	position: relative;
+
+	@include max-breakpoint('medium') {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	@include max-breakpoint('xsmall') {
+		margin-bottom: 40px;
+	}
 }
 
 .header2 {
@@ -30,6 +45,11 @@
 	position: relative;
 	transform: translate(-50%, 100%);
 	@extend %disable-select;
+
+	@include max-breakpoint('medium') {
+		position: relative;
+		transform: translate(0, 0);
+	}
 }
 
 .header2--dark {

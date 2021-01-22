@@ -83,6 +83,27 @@
 					display: none;
 				}
 			}
+
+			@include max-breakpoint('medium') {
+				&:nth-child(1) {
+					grid-column: 1/5;
+					grid-row: 1/2;
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+				&:nth-child(3) {
+					grid-column: 1/5;
+					grid-row: 2/3;
+				}
+				&:nth-child(4) {
+					grid-column: 1/5;
+					grid-row: 3/4;
+				}
+				&:nth-child(5) {
+					display: none;
+				}
+			}
 		}
 
 		.imageGallery__image-link {

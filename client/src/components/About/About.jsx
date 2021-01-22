@@ -7,7 +7,7 @@ export default function About() {
 		<div id="aboutSection" className="about section">
 			<div className="about__header-container header-container">
 				<h1 className="about__header1 header1 header1--dark">Acerca de</h1>
-				<h2 className="about__header2 header2 header2--dark">Nosotros</h2>
+				<h2 className=" header2 header2--dark about__header2">Nosotros</h2>
 			</div>
 			<div className="about__mission">
 				<div className="about__mission-container">

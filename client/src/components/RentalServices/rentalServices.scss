@@ -8,11 +8,15 @@
 	place-items: center;
 	margin-bottom: 100px;
 
-	@media screen and (max-width: 1700px) {
+	@include max-breakpoint(1700px) {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@media screen and (max-width: 1420px) {
+	@include max-breakpoint('xxlarge') {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include max-breakpoint('medium') {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }

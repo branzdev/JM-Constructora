@@ -11,13 +11,28 @@
 	white-space: normal;
 
 	&:last-child {
-		margin-right: 0;
-		color: red;
+		margin-right: 15px;
 	}
 
-	@include max-breakpoint('large') {
+	@include max-breakpoint('xlarge') {
 		height: 476px;
 		width: 438px;
+	}
+
+	@include max-breakpoint('medium') {
+		height: 426px;
+		width: 388px;
+	}
+
+	@include max-breakpoint('small') {
+		height: 388px;
+		width: 350px;
+		margin-right: 50px;
+	}
+
+	@include max-breakpoint('xsmall') {
+		height: 288px;
+		width: 250px;
 	}
 
 	&::before {
@@ -43,6 +58,10 @@
 		right: 0;
 		border-radius: var(--border-radius);
 		box-shadow: var(--box-shadow);
+
+		@include max-breakpoint('xsmall') {
+			width: 208px;
+		}
 	}
 	.proyectsCard__text-container {
 		height: 171px;
@@ -65,6 +84,20 @@
 		align-items: center;
 		backdrop-filter: blur(7px);
 		-webkit-backdrop-filter: blur(7px);
+
+		@include max-breakpoint('small') {
+			height: 125px;
+			width: 298px;
+			top: unset;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+		}
+
+		@include max-breakpoint('xsmall') {
+			transform: translate(-50%, 50%);
+			width: 250px;
+		}
 	}
 
 	.proyectsCard__tex {

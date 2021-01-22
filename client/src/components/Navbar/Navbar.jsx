@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 //styles
 import './navbar.scss';
 //images
-import logo from '../../img/logoMinimal.svg';
 
 export default function Navbar() {
 	const { scrollY } = useViewportScroll();
-	let height = useTransform(scrollY, [0, 700], [100, 90]);
+	let height;
+
+	const [isSmall, setIsSmall] = useState(false);
+
+	height = useTransform(
+		scrollY,
+		[0, 700],
+		[isSmall ? 70 : 100, isSmall ? 60 : 90]
+	);
+
+	useEffect(() => {
+		if (window.screen.width >= 640) {
+		} else {
+			setIsSmall(true);
+		}
+	}, []);
 
 	return (
 		<motion.nav className="navbar" style={{ height: height }}>
@@ -32,12 +46,11 @@ export default function Navbar() {
 						to="/"
 						className="navbar__list-item-link navbar__list-item-link--logo disable-select"
 					>
-						<motion.img
+						<motion.div
 							whileTap={{ scale: 0.9 }}
 							className="navbar__list-item-link-image"
-							src={logo}
 							alt=""
-						/>
+						></motion.div>
 					</Link>
 				</li>
 			</ul>

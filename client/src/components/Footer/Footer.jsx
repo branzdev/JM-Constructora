@@ -131,7 +131,9 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className="footer__bottom-line">
-				<span className="footer__bottom-line-header">Contactémonos</span>
+				<span className="footer__bottom-line-header">
+					Pongámonos en contacto
+				</span>
 				<div className="footer__bottom-line-container footer__bottom-line-phone">
 					<span className="footer__bottom-line-text footer__bottom-line-phone-text">
 						Llámanos

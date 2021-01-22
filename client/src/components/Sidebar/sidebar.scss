@@ -12,6 +12,15 @@
 	display: flex;
 	align-items: center;
 
+	@include max-breakpoint('small') {
+		width: 284px;
+		height: 80px;
+	}
+
+	@include max-breakpoint('xsmall') {
+		width: 240px;
+	}
+
 	.sidebar__active-background {
 		position: fixed;
 		height: 0;
@@ -27,6 +36,10 @@
 	&.sidebar--active {
 		width: 700px;
 		height: 100vh;
+
+		@include max-breakpoint('medium') {
+			width: 100vw;
+		}
 
 		.sidebar__active-background {
 			opacity: 0.8;
@@ -55,9 +68,15 @@
 
 		.sidebar__opener {
 			height: 80px;
-			top: 25px;
+			top: 50px;
 			right: 50px;
 			padding: 0;
+
+			@include max-breakpoint('small') {
+				height: 60px;
+				right: 25px;
+				top: 25px;
+			}
 
 			.sidebar__opener-icon {
 				position: relative;
@@ -143,6 +162,14 @@
 		z-index: 100;
 		transition: all 0.3s ease-out;
 
+		@include max-breakpoint('xlarge') {
+			padding-left: 50px;
+		}
+
+		@include max-breakpoint('small') {
+			padding-left: 25px;
+		}
+
 		.sidebar__opener-icon {
 			height: 18px;
 			width: 18px;
@@ -186,32 +213,57 @@
 	.sidebar__logo {
 		height: 80px;
 		left: 50px;
-		top: 25px;
+		top: 50px;
 		position: absolute;
 		object-fit: cover;
 		object-position: center;
 		opacity: 0;
 		transform: translateX(-150%) scaleY(0);
 		transition: all 0.3s ease-out;
+
+		@include max-breakpoint('small') {
+			height: 60px;
+			left: 25px;
+			top: 25px;
+		}
 	}
 
 	.sidebar__list {
 		position: absolute;
 		width: 100%;
 		display: grid;
-		grid-template-rows: repeat(8, 90px);
+		height: 70%;
+		grid-template-rows: repeat(8, 1fr);
+		grid-template-columns: calc(100% - 100px);
 		justify-content: center;
+		align-items: center;
 		transform: translateX(-110%);
-		margin-top: 50px;
+		top: 20%;
+
+		@include max-breakpoint('small') {
+			top: 20%;
+			grid-template-rows: repeat(8, 50px);
+			grid-template-columns: calc(100% - 50px);
+			row-gap: 20px;
+		}
+
+		@include max-breakpoint('xsmall') {
+			top: 17%;
+			row-gap: 15px;
+		}
 
 		//z-index: 100;
 
 		.sidebar__list-item {
 			list-style: none;
-			font-size: 22.5px;
+			font-size: rem(22.5px);
 			z-index: 100;
 			transform: translateX(-110%);
 			transition: transform 0.15s ease-out;
+
+			@include max-breakpoint('xsmall') {
+				font-size: rem(18px);
+			}
 		}
 
 		.sidebar__list-item-link {
@@ -228,11 +280,23 @@
 			&:hover {
 				background: rgba(var(--color-tertiary-rgb), 0.1);
 			}
+
+			@include max-breakpoint('small') {
+				padding: 0;
+			}
 		}
 
 		.sidebar__list-item--secondary {
 			padding-left: 50px;
-			font-size: 22.5px;
+			font-size: rem(22.5px);
+
+			@include max-breakpoint('small') {
+				padding-left: 25px;
+			}
+
+			@include max-breakpoint('xsmall') {
+				font-size: rem(18px);
+			}
 		}
 	}
 }
