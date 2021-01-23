@@ -4,4 +4,8 @@
 	@extend %section-padding;
 	@extend %scroll-margin;
 	margin-bottom: 200px;
+
+	@include max-breakpoint('small') {
+		margin-bottom: 150px;
+	}
 }

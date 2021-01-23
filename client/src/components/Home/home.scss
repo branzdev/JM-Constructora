@@ -48,10 +48,9 @@
 			no-repeat;
 		position: fixed;
 		z-index: 5000;
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
-		display: none;
 
 		&::after {
 			content: '';
@@ -66,21 +65,38 @@
 
 		.home__intro-image {
 			height: 171px;
-			width: 577px;
-			object-position: center;
-			object-fit: cover;
 			display: block;
 			position: absolute;
 			opacity: 0;
+
+			@include max-breakpoint('large') {
+				height: 121px;
+			}
+
+			@include max-breakpoint('xsmall') {
+				height: 80px;
+			}
+		}
+
+		.home__intro-text-container {
+			text-align: center;
 		}
 
 		.home__intro-text {
 			font: var(--font-header1);
-			font-size: 72px + 36px;
+			font-size: rem(72px + 18px);
 			color: var(--color-font__normal-dark);
 			display: inline-block;
 			transform: translateY(100%);
 			padding: 15px;
+
+			@include max-breakpoint('xxlarge') {
+				font: var(--font-header1);
+			}
+
+			@include max-breakpoint('xsmall') {
+				padding: 8px;
+			}
 		}
 
 		.hide {
@@ -90,6 +106,12 @@
 
 			& + .hide {
 				margin-left: 50px;
+			}
+
+			@include max-breakpoint('large') {
+				& + .hide {
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -280,6 +302,7 @@
 		bottom: 35px;
 		animation: arrowPulse 0.5s ease-out infinite alternate;
 		cursor: pointer;
+		@extend %disable-tap-highlight;
 
 		@include max-breakpoint('large') {
 			background-color: var(--color-body);

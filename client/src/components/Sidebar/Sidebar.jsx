@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion /* useViewportScroll, useTransform */ } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 //styles
 import './sidebar.scss';
 //images
@@ -17,9 +17,7 @@ export default function Sidebar() {
 
 	const handleOnClick = () => {
 		const sidebar = sidebarRef.current;
-
 		setIsSidebarActive(!isSidebarActive);
-
 		sidebar.classList.toggle('sidebar--active');
 	};
 
@@ -35,10 +33,7 @@ export default function Sidebar() {
 			//style={!isSidebarActive && { height: height }}
 			className="sidebar"
 		>
-			<div
-				onClick={console.log('hola')}
-				className="sidebar__active-background"
-			></div>
+			<div className="sidebar__active-background"></div>
 			<div className="sidebar__background"></div>
 			<motion.div className="sidebar__opener">
 				<motion.div
@@ -67,7 +62,7 @@ export default function Sidebar() {
 			<ul className="sidebar__list">
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
 					<Link
-						to="/"
+						to="/#homeSection"
 						onClick={handleOnClickLink}
 						className="sidebar__list-item-link"
 					>
@@ -118,7 +113,7 @@ export default function Sidebar() {
 				</motion.li>
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
 					<Link
-						to="/imageGallery"
+						to="/#imageGallerySection"
 						onClick={handleOnClickLink}
 						className="sidebar__list-item-link"
 					>
@@ -126,12 +121,20 @@ export default function Sidebar() {
 					</Link>
 				</motion.li>
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
-					<Link onClick={handleOnClickLink} className="sidebar__list-item-link">
+					<Link
+						to="/#aboutSection"
+						onClick={handleOnClickLink}
+						className="sidebar__list-item-link"
+					>
 						Acerca de Nosotros
 					</Link>
 				</motion.li>
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
-					<Link onClick={handleOnClickLink} className="sidebar__list-item-link">
+					<Link
+						to="/#contactSection"
+						onClick={handleOnClickLink}
+						className="sidebar__list-item-link"
+					>
 						Contáctenos
 					</Link>
 				</motion.li>

@@ -7,12 +7,8 @@ import Button from '../Button/Button';
 //images
 import logoMinimal from '../../img/logoMinimal.svg';
 
-export default function Home() {
+export default function Home(props) {
 	const homeIntroContainerRef = useRef();
-
-	useLayoutEffect(() => {
-		window.scrollTo(0, 0);
-	});
 
 	useEffect(() => {
 		const tl = gsap.timeline({

@@ -33,19 +33,9 @@
 	@include max-breakpoint('xsmall') {
 		height: 200px;
 		width: 250px;
-
-		&:first-child() {
-			.servicesPageCard__text-container {
-				transform: translateY(19%);
-			}
-		}
 	}
 
 	&:hover {
-		@include max-breakpoint('xsmall') {
-			height: 250px;
-		}
-
 		&::before {
 			content: '';
 			position: absolute;
@@ -85,7 +75,7 @@
 		}
 
 		@include max-breakpoint('xsmall') {
-			max-height: 100px;
+			height: 100px;
 		}
 	}
 

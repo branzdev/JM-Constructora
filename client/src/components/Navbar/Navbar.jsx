@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 //styles
 import './navbar.scss';
@@ -41,9 +41,9 @@ export default function Navbar() {
 						info@jmendezconstructorasa.com
 					</a>
 				</li>
-				<li className="navbar__list-item ">
+				<motion.li className="navbar__list-item ">
 					<Link
-						to="/"
+						to="/#homeSection"
 						className="navbar__list-item-link navbar__list-item-link--logo disable-select"
 					>
 						<motion.div
@@ -52,7 +52,7 @@ export default function Navbar() {
 							alt=""
 						></motion.div>
 					</Link>
-				</li>
+				</motion.li>
 			</ul>
 		</motion.nav>
 	);

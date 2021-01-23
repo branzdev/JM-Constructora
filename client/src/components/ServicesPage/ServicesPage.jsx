@@ -92,16 +92,20 @@ export default function ServicesPage() {
 					<ConstructionServices />
 				</Route>
 			</div>
-			<div
-				id="servicesFormHeader"
-				className="header-container servicesPage__header-container"
-			>
-				<h1 className="header1 header1--dark servicesPage__header1">Cotizar</h1>
-				<h2 className="header2 header2--dark servicesPage__header2">
-					Servicio
-				</h2>
+			<div className="servicesPage__quotation-container">
+				<div
+					id="servicesFormHeader"
+					className="header-container servicesPage__header-container"
+				>
+					<h1 className="header1 header1--dark servicesPage__header1">
+						Cotizar
+					</h1>
+					<h2 className="header2 header2--dark servicesPage__header2">
+						Servicio
+					</h2>
+				</div>
+				<Form location="services" />
 			</div>
-			<Form location="services" />
 		</div>
 	);
 }

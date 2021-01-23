@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 //styles
 import './footer.scss';
 //components
@@ -68,59 +69,68 @@ export default function Footer() {
 				<img src={logoContact} alt="" className="footer_content-logo" />
 				<ul className="footer__content-sitemap">
 					<li className="footer__content-sitemap-item">
-						<a href="#top" className="footer__content-sitemap-item-link">
+						<Link
+							to="/#homeSection"
+							className="footer__content-sitemap-item-link"
+						>
 							Inicio
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item">
-						<a
-							href="#proyectsSection"
+						<Link
+							to="/#proyectsSection"
 							className="footer__content-sitemap-item-link"
 						>
 							Proyectos
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item">
-						<a
-							href="#imageGallerySection"
+						<Link
+							to="/#imageGallerySection"
 							className="footer__content-sitemap-item-link"
 						>
 							Galería de Imágenes
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item">
-						<a
-							href="#aboutSection"
+						<Link
+							to="/#aboutSection"
 							className="footer__content-sitemap-item-link"
 						>
 							Acerca de Nosotros
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item">
-						<a
-							href="#contactSection"
+						<Link
+							to="/#contactSection"
 							className="footer__content-sitemap-item-link"
 						>
 							Contacto
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item">
-						<a
-							href="#servicesSection"
+						<Link
+							to="/services/rental"
 							className="footer__content-sitemap-item-link"
 						>
 							Servicios
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item footer__content-sitemap-item--secondary">
-						<a href="##" className="footer__content-sitemap-item-link">
+						<Link
+							to="/services/rental"
+							className="footer__content-sitemap-item-link"
+						>
 							Alquiler de Equipo
-						</a>
+						</Link>
 					</li>
 					<li className="footer__content-sitemap-item footer__content-sitemap-item--secondary">
-						<a href="##" className="footer__content-sitemap-item-link">
+						<Link
+							to="/services/construction"
+							className="footer__content-sitemap-item-link"
+						>
 							Construcción de Obras Civiles
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<div className="footer__content-location-container">

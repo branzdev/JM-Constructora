@@ -12,6 +12,7 @@
 	outline: none;
 	border: none;
 	@extend %disable-select;
+	@extend %disable-tap-highlight;
 }
 
 .button--primary {

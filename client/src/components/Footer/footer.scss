@@ -11,7 +11,19 @@
 	}
 
 	@include max-breakpoint('small') {
-		height: 930px;
+		height: 820px;
+	}
+
+	@include max-breakpoint('xsmall') {
+		height: 840px;
+	}
+
+	@include max-breakpoint(415px) {
+		height: 860px;
+	}
+
+	@include max-breakpoint(335px) {
+		height: 880px;
 	}
 
 	.footer__socials-container {
@@ -106,6 +118,10 @@
 			top: 100px;
 		}
 
+		@include max-breakpoint('small') {
+			top: 80px;
+		}
+
 		.footer_content-logo {
 			display: inline-block;
 			height: 100%;
@@ -153,6 +169,7 @@
 			@include max-breakpoint('small') {
 				row-gap: 15px;
 				padding: 0 15px;
+				grid-template-columns: 7% 39.5% 7% 39.5% 7%;
 			}
 
 			.footer__content-sitemap-item {
@@ -166,7 +183,7 @@
 				}
 
 				@include max-breakpoint('xsmall') {
-					max-width: 134px;
+					max-width: 200px;
 				}
 
 				&:nth-child(1) {
@@ -236,6 +253,41 @@
 						grid-row: 4/5;
 					}
 				}
+
+				@include max-breakpoint('small') {
+					&:nth-child(1) {
+						grid-column: 2/3;
+						grid-row: 1/2;
+					}
+					&:nth-child(2) {
+						grid-column: 2/3;
+						grid-row: 2/3;
+					}
+					&:nth-child(3) {
+						grid-column: 2/3;
+						grid-row: 3/4;
+					}
+					&:nth-child(4) {
+						grid-column: 2/3;
+						grid-row: 4/5;
+					}
+					&:nth-child(5) {
+						grid-column: 4/5;
+						grid-row: 1/2;
+					}
+					&:nth-child(6) {
+						grid-column: 4/5;
+						grid-row: 2/3;
+					}
+					&:nth-child(7) {
+						grid-column: 4/5;
+						grid-row: 3/4;
+					}
+					&:nth-child(8) {
+						grid-column: 4/5;
+						grid-row: 4/5;
+					}
+				}
 			}
 
 			.footer__content-sitemap-item--secondary {
@@ -263,7 +315,15 @@
 					display: inline-block;
 					position: absolute;
 					top: 7px;
-					transform: translate(-30px, 0);
+					transform: translateX(-30px);
+
+					@include max-breakpoint('small') {
+						top: 3px;
+					}
+
+					@include max-breakpoint('xsmall') {
+						transform: translateX(-20px);
+					}
 				}
 
 				&:hover {
@@ -284,7 +344,7 @@
 				}
 
 				@include max-breakpoint('xsmall') {
-					left: 35%;
+					left: 0;
 				}
 			}
 		}
@@ -349,6 +409,7 @@
 		padding: 10px 0;
 
 		@include max-breakpoint('xlarge') {
+			padding: 0;
 			grid-template-rows: 1fr 1fr;
 			grid-template-columns: repeat(3, auto);
 			column-gap: 10px;

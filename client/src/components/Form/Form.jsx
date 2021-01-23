@@ -93,6 +93,7 @@ export default function Form(props) {
 								popup: 'sweet-alert2__popup',
 								title: 'sweet-alert2__title',
 								confirmButton: 'sweet-alert2__confirm-button',
+								content: 'sweet-alert2__content',
 							},
 						});
 						resetForm();
@@ -107,6 +108,7 @@ export default function Form(props) {
 								popup: 'sweet-alert2__popup',
 								title: 'sweet-alert2__title',
 								confirmButton: 'sweet-alert2__confirm-button',
+								content: 'sweet-alert2__content',
 							},
 						});
 					}
@@ -126,6 +128,7 @@ export default function Form(props) {
 								popup: 'sweet-alert2__popup-toast',
 								title: 'sweet-alert2__title-toast',
 								confirmButton: 'sweet-alert2__confirm-button-toast',
+								content: 'sweet-alert2__content-toast',
 							},
 						});
 					} else {
@@ -148,6 +151,7 @@ export default function Form(props) {
 					popup: 'sweet-alert2__popup-toast',
 					title: 'sweet-alert2__title-toast',
 					confirmButton: 'sweet-alert2__confirm-button-toast',
+					content: 'sweet-alert2__content-toast',
 				},
 			});
 		}

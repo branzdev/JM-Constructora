@@ -10,9 +10,6 @@
 	display: inline-block;
 	position: relative;
 	@extend %disable-select;
-	@include max-breakpoint('small') {
-		font-size: rem(54px);
-	}
 }
 
 .header1--dark {
@@ -69,6 +66,14 @@
 	font: var(--font-normal__raleway) !important;
 	border-radius: var(--border-radius) !important;
 
+	.sweet-alert2__title {
+		font: var(--font-header2) !important;
+	}
+
+	.sweet-alert2__content {
+		font: var(--font-normal__raleway) !important;
+	}
+
 	.sweet-alert2__popup {
 		background: var(--color-body) !important;
 		border-radius: inherit !important;
@@ -80,6 +85,8 @@
 	.sweet-alert2__confirm-button {
 		background: var(--color-secondary) !important;
 		border-radius: var(--border-radius) !important;
+		font: var(--font-normal__raleway) !important;
+		line-height: initial !important;
 	}
 }
 
@@ -89,16 +96,27 @@
 	font: var(--font-normal__raleway) !important;
 	border-radius: var(--border-radius) !important;
 
+	@include max-breakpoint('small') {
+		width: 100% !important;
+	}
+
 	.sweet-alert2__popup-toast {
 		background: var(--color-body) !important;
 		border-radius: inherit !important;
 	}
 
 	.sweet-alert2__title-toast {
+		font: var(--font-normal__raleway) !important;
+	}
+
+	.sweet-alert2__content-toast {
+		font: var(--font-normal__raleway) !important;
 	}
 
 	.sweet-alert2__confirm-button-toast {
 		background: var(--color-secondary) !important;
 		border-radius: var(--border-radius) !important;
+		font: var(--font-normal__raleway) !important;
+		line-height: initial !important;
 	}
 }

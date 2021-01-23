@@ -38,4 +38,13 @@ $font-size-html: 18px;
 	--border-radius: 8px;
 	--box-shadow: -5px 8px 8px #00000029;
 	--content-padding: 100px;
+
+	@include max-breakpoint('small') {
+		--font-header1: italic 700 #{rem(48px)} 'Bitter', serif;
+		--font-header2: 700 #{rem(32px)} 'Raleway', sans-serif;
+		--font-normal__raleway: #{rem(16px)}/ #{rem(40px)} 'Raleway', sans-serif;
+		--font-normal__raleway-bold: 700 #{rem(16px)}/ #{rem(40px)} 'Raleway';
+		--font-normal__bitter: #{rem(16px)}/ #{rem(40px)} 'Bitter', serif;
+		--font-html: #{rem(16px)}/ #{rem(40px)} 'Raleway', sans-serif;
+	}
 }
