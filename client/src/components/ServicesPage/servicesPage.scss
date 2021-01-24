@@ -85,6 +85,10 @@
 			}
 
 			@include max-breakpoint('xsmall') {
+				padding: 5px;
+			}
+
+			@include max-breakpoint(453px) {
 				padding: 3px;
 				line-height: 25px;
 			}

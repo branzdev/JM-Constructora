@@ -4,7 +4,7 @@ import './about.scss';
 
 export default function About() {
 	return (
-		<div id="aboutSection" className="about section">
+		<div id="aboutSection" className="section about">
 			<div className="about__header-container header-container">
 				<h1 className="about__header1 header1 header1--dark">Acerca de</h1>
 				<h2 className=" header2 header2--dark about__header2">Nosotros</h2>

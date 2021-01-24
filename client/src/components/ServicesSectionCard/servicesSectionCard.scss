@@ -42,17 +42,9 @@
 				background: var(--color-body);
 			}
 
-			&:active {
-				right: 50%;
-				transform: translate(50%, 150%) scale(0.9);
-			}
-
+			&:active,
+			&:target,
 			&:focus {
-				right: 50%;
-				transform: translate(50%, 150%) scale(0.9);
-			}
-
-			&:target {
 				right: 50%;
 				transform: translate(50%, 150%) scale(0.9);
 			}
@@ -108,17 +100,9 @@
 					top: 50%;
 					transform: translate(75%, -50%);
 
-					&:active {
-						top: 50%;
-						transform: translate(75%, -50%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						top: 50%;
-						transform: translate(75%, -50%) scale(0.9);
-					}
-
-					&:target {
 						top: 50%;
 						transform: translate(75%, -50%) scale(0.9);
 					}
@@ -139,17 +123,9 @@
 					top: 50%;
 					transform: translate(-75%, -50%);
 
-					&:active {
-						top: 50%;
-						transform: translate(-75%, -50%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						top: 50%;
-						transform: translate(-75%, -50%) scale(0.9);
-					}
-
-					&:target {
 						top: 50%;
 						transform: translate(-75%, -50%) scale(0.9);
 					}
@@ -165,17 +141,9 @@
 					top: unset;
 					transform: translate(40%, 50%);
 
-					&:active {
-						top: unset;
-						transform: translate(40%, 50%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						top: unset;
-						transform: translate(40%, 50%) scale(0.9);
-					}
-
-					&:target {
 						top: unset;
 						transform: translate(40%, 50%) scale(0.9);
 					}
@@ -188,17 +156,9 @@
 					top: unset;
 					transform: translate(-40%, 50%);
 
-					&:active {
-						top: unset;
-						transform: translate(-40%, 50%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						top: unset;
-						transform: translate(-40%, 50%) scale(0.9);
-					}
-
-					&:target {
 						top: unset;
 						transform: translate(-40%, 50%) scale(0.9);
 					}
@@ -221,17 +181,9 @@
 					right: 50%;
 					transform: translate(50%, 85%);
 
-					&:active {
-						right: 50%;
-						transform: translate(50%, 85%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						right: 50%;
-						transform: translate(50%, 85%) scale(0.9);
-					}
-
-					&:target {
 						right: 50%;
 						transform: translate(50%, 85%) scale(0.9);
 					}
@@ -251,17 +203,9 @@
 					left: 50%;
 					transform: translate(-50%, 85%);
 
-					&:active {
-						left: 50%;
-						transform: translate(-50%, 85%) scale(0.9);
-					}
-
+					&:active,
+					&:target,
 					&:focus {
-						left: 50%;
-						transform: translate(-50%, 85%) scale(0.9);
-					}
-
-					&:target {
 						left: 50%;
 						transform: translate(-50%, 85%) scale(0.9);
 					}

@@ -6,6 +6,11 @@
 	@extend %section-padding;
 	font: var(--font-normal__raleway);
 	@extend %scroll-margin;
+	margin-bottom: 38.75px;
+
+	@include max-breakpoint('large') {
+		margin-bottom: 100px;
+	}
 
 	//	scroll-margin-top: 140px; does not have support for IE
 

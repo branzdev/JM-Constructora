@@ -17,9 +17,20 @@
 
 .button--primary {
 	background: var(--color-body);
+
+	&:hover {
+		background: var(--color-secondary);
+		color: var(--color-font__normal-light);
+	}
 }
 
-.button--primary:hover {
+.button--secondary {
 	background: var(--color-secondary);
 	color: var(--color-font__normal-light);
+
+	&:hover {
+		background: var(--color-body);
+		color: var(--color-font__normal-dark);
+		border: 3px solid var(--color-secondary);
+	}
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 //styles
 import './home.scss';
@@ -71,7 +71,7 @@ export default function Home(props) {
 	}, []);
 
 	const handleOnClick = () => {
-		window.location.href = '#aboutSection';
+		window.location.href = '/#servicesSection';
 	};
 
 	return (

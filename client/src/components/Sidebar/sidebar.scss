@@ -71,6 +71,10 @@
 				height: 60px;
 			}
 
+			@include max-breakpoint(300px) {
+				left: calc(100% - 148px - 10px);
+			}
+
 			.sidebar__opener-icon {
 				position: relative;
 				margin-right: 13px;
@@ -224,6 +228,10 @@
 			left: 25px;
 			top: 25px;
 		}
+
+		@include max-breakpoint(300px) {
+			left: 10px;
+		}
 	}
 
 	.sidebar__list {
@@ -267,6 +275,7 @@
 			align-items: center;
 			padding: 25px 0;
 			border-radius: var(--border-radius);
+			font: var(--font-normal__raleway);
 
 			&:hover {
 				background: rgba(var(--color-tertiary-rgb), 0.1);
@@ -276,8 +285,12 @@
 				padding: 20px 0;
 			}
 
-			@include max-breakpoint('medium') {
-				padding: 15px 0;
+			@include max-breakpoint('small') {
+				padding: 10px 0;
+			}
+
+			@media screen and(max-height: 515px) {
+				padding: 1px 0;
 			}
 		}
 

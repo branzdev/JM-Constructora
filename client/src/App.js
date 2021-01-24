@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 //components
 import ScrollProgressBar from './components/ScrollProgressBar/ScrollProgressBar';
@@ -15,8 +15,7 @@ import ServicesPage from './components/ServicesPage/ServicesPage';
 import ImageGalleryPage from './components/ImageGalleryPage/ImageGalleryPage';
 
 function App() {
-	const appRef = useRef();
-
+	/* 
 	const getData = async () => {
 		const response = await fetch('/testApi');
 		const data = await response.json();
@@ -29,6 +28,8 @@ function App() {
 			console.log(res);
 		});
 	}, []);
+
+ */
 
 	/*
 
@@ -45,7 +46,7 @@ function App() {
 	}, []); */
 
 	return (
-		<div ref={appRef} className="App">
+		<div className="App">
 			<ScrollProgressBar />
 			<Sidebar />
 			<Navbar />

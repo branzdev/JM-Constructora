@@ -41,18 +41,14 @@ export default function Navbar() {
 						info@jmendezconstructorasa.com
 					</a>
 				</li>
-				<motion.li className="navbar__list-item ">
+				<li className="navbar__list-item ">
 					<Link
 						to="/#homeSection"
 						className="navbar__list-item-link navbar__list-item-link--logo disable-select"
 					>
-						<motion.div
-							whileTap={{ scale: 0.9 }}
-							className="navbar__list-item-link-image"
-							alt=""
-						></motion.div>
+						<div className="navbar__list-item-link-image" alt=""></div>
 					</Link>
-				</motion.li>
+				</li>
 			</ul>
 		</motion.nav>
 	);
