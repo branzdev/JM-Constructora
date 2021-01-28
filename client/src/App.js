@@ -15,36 +15,6 @@ import ServicesPage from './components/ServicesPage/ServicesPage';
 import ImageGalleryPage from './components/ImageGalleryPage/ImageGalleryPage';
 
 function App() {
-	/* 
-	const getData = async () => {
-		const response = await fetch('/testApi');
-		const data = await response.json();
-		if (response.status !== 200) throw Error(data.message);
-
-		return data;
-	};
-	useEffect(() => {
-		getData().then((res) => {
-			console.log(res);
-		});
-	}, []);
-
- */
-
-	/*
-
-	------dynamically setting header containers height
-
-	useEffect(() => {
-		const headerContainers = appRef.current.querySelectorAll(
-			'.header-container'
-		);
-		const headerContainersHeight = `${headerContainers[0].scrollHeight}px`;
-		headerContainers.forEach((hc) => {
-			hc.style.height = headerContainersHeight;
-		});
-	}, []); */
-
 	return (
 		<div className="App">
 			<ScrollProgressBar />

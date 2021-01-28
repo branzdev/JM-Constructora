@@ -1,4 +1,6 @@
 import React from 'react';
+import { Image, Placeholder } from 'cloudinary-react';
+
 //styles
 import './constructionServices.scss';
 
@@ -19,8 +21,22 @@ export default function ConstructionServices() {
 					el formulario de cotización y nos pondremos en contacto contigo lo más
 					pronto posible para hacer realidad su proyecto.
 				</p>
-
-				<div className="constructionServices__image"></div>
+				<Image
+					className="constructionServices__image"
+					cloudName="bmongemendez"
+					publicId="jmendezconstructorasa/logoSVG"
+					responsive
+					width="300"
+					height="260"
+					crop="fill"
+					loading="lazy"
+					dpr="auto"
+					fetchFormat="auto"
+					quality="auto"
+					alt="Logo JMéndez Constructora"
+				>
+					<Placeholder />
+				</Image>
 			</div>
 		</div>
 	);

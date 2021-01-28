@@ -1,14 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { motion /* useViewportScroll, useTransform */ } from 'framer-motion';
 import { HashLink as Link } from 'react-router-hash-link';
+import { Image, Placeholder } from 'cloudinary-react';
+
 //styles
 import './sidebar.scss';
 //images
-import logo from '../../img/logo.png';
 
 export default function Sidebar() {
 	//const { scrollY } = useViewportScroll();
-
 	const sidebarRef = useRef();
 
 	const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -54,11 +54,24 @@ export default function Sidebar() {
 					{!isSidebarActive ? 'MENÚ' : 'CERRAR'}
 				</motion.p>
 			</motion.div>
-			<img
-				src={logo}
-				alt="Logo JMéndez Constructora"
-				className="sidebar__logo"
-			/>
+			<div className="sidebar__logo-container">
+				<Image
+					className="sidebar__logo"
+					cloudName="bmongemendez"
+					publicId="jmendezconstructorasa/logoSvg"
+					responsive
+					width="auto"
+					crop="scale"
+					loading="lazy"
+					dpr="auto"
+					fetchFormat="auto"
+					quality="auto"
+					alt="Logo JMéndez Constructora"
+				>
+					<Placeholder />
+				</Image>
+			</div>
+
 			<ul className="sidebar__list">
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
 					<Link
@@ -113,7 +126,7 @@ export default function Sidebar() {
 				</motion.li>
 				<motion.li whileTap={{ scale: 0.9 }} className="sidebar__list-item">
 					<Link
-						to="/#imageGallerySection"
+						to="/imageGallery"
 						onClick={handleOnClickLink}
 						className="sidebar__list-item-link"
 					>

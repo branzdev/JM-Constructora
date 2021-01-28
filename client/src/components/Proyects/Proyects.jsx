@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import './proyects.scss';
 //components
 import ProyectsCard from '../ProyectsCard/ProyectsCard';
-//images
-import proyect1__image from '../../img/proyect1.jpg';
 
 export default function Proyects() {
 	const ref = useRef(null);
@@ -69,23 +67,23 @@ export default function Proyects() {
 				className="proyects__cards-container"
 			>
 				<ProyectsCard
-					image={proyect1__image}
+					publicId="jmendezconstructorasa/proyect1"
 					text="Suministro, Acarreo y Colocación de Base"
 				/>
 				<ProyectsCard
-					image={proyect1__image}
+					publicId="jmendezconstructorasa/proyect1"
 					text="Suministro, Acarreo y Colocación de Carpeta Asfáltica"
 				/>
 				<ProyectsCard
-					image={proyect1__image}
+					publicId="jmendezconstructorasa/proyect1"
 					text="Suministro, Acarreo y Colocación de Base"
 				/>
 				<ProyectsCard
-					image={proyect1__image}
+					publicId="jmendezconstructorasa/proyect1"
 					text="Suministro, Acarreo y Colocación de Base"
 				/>
 				<ProyectsCard
-					image={proyect1__image}
+					publicId="jmendezconstructorasa/proyect1"
 					text="Suministro, Acarreo y Colocación de Base"
 				/>
 			</div>

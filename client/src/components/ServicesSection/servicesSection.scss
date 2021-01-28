@@ -7,8 +7,9 @@
 		height: auto;
 		width: 100%;
 		position: relative;
-		background: transparent url(../../img/paperBackground.jpg) center/cover
-			no-repeat;
+		background: transparent
+			url('https://res.cloudinary.com/bmongemendez/image/upload/w_auto,dpr_auto,c_scale,f_auto,q_auto/v1611538303/jmendezconstructorasa/paperBackground')
+			center/cover no-repeat;
 		@extend %section-padding;
 		padding-top: 100px;
 		padding-bottom: 200px;

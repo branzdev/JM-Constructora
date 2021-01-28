@@ -54,6 +54,10 @@
 			animation: 0.3s forwards fadeIn ease;
 		}
 
+		.servicesCard__text-container::after {
+			color: var(--color-font__normal-light);
+		}
+
 		.servicesCard__text-container::after,
 		.servicesCard__text-container:hover::after {
 			content: 'Más Info';
@@ -70,9 +74,6 @@
 			animation: 0.3s forwards fadeIn ease;
 		}
 
-		.servicesCard__text-container::after {
-			color: var(--color-font__normal-light);
-		}
 		.servicesCard__text-container:hover::after {
 			color: var(--color-font__normal-dark);
 		}
@@ -219,14 +220,22 @@
 		width: 250px;
 	}
 
-	.servicesCard__image {
+	.servicesCard__image-container {
 		height: 100%;
 		width: 100%;
 		display: block;
 		object-fit: cover;
 		object-position: center;
-		border-radius: var(--border-radius);
-		box-shadow: var(--box-shadow);
+
+		.servicesCard__image {
+			height: 100%;
+			width: 100%;
+			display: block;
+			object-fit: cover;
+			object-position: center;
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
+		}
 	}
 
 	.servicesCard__text-container {

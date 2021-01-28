@@ -3,9 +3,7 @@ import React from 'react';
 import ServicesSectionCard from '../ServicesSectionCard/ServicesSectionCard';
 //styles
 import './servicesSection.scss';
-//images
-import serviceRent from '../../img/serviceRent.jpg';
-import serviceConstruction from '../../img/serviceConstruction.jpg';
+
 export default function Services() {
 	return (
 		<div id="servicesSection" className="services section">
@@ -19,12 +17,12 @@ export default function Services() {
 				<div className="services__cards-container">
 					<ServicesSectionCard
 						link="rental"
-						image={serviceRent}
+						publicId="jmendezconstructorasa/serviceRent"
 						text="Alquiler de equipo"
 					/>
 					<ServicesSectionCard
 						link="construction"
-						image={serviceConstruction}
+						publicId="jmendezconstructorasa/serviceConstruction"
 						text="Construcción de Obras Civiles"
 					/>
 				</div>

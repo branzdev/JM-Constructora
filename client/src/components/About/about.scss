@@ -1,12 +1,13 @@
-@import '../../styles/index.scss';
+@import '../../styles/index';
 
 .about {
-	width: 100%;
-	position: relative;
 	@extend %section-padding;
-	font: var(--font-normal__raleway);
 	@extend %scroll-margin;
+
+	font: var(--font-normal__raleway);
 	margin-bottom: 38.75px;
+	position: relative;
+	width: 100%;
 
 	@include max-breakpoint('large') {
 		margin-bottom: 100px;
@@ -16,16 +17,16 @@
 
 	.about__mission,
 	.about__vission {
+		display: grid;
 		height: auto;
 		padding: 73.5px 0;
-		width: 50%;
-		display: grid;
 		place-items: center;
+		width: 50%;
 
 		@include max-breakpoint('large') {
-			width: 100%;
-			padding: 40px 0;
 			margin-bottom: 0;
+			padding: 40px 0;
+			width: 100%;
 		}
 
 		@include max-breakpoint('xsmall') {
@@ -34,29 +35,14 @@
 	}
 
 	.about__mission {
-		background: transparent url('../../img/aboutBackgroundImage.jpg')
+		background:
+			transparent
+			url('https://res.cloudinary.com/bmongemendez/image/upload/w_840,h_497,dpr_auto,c_fill,f_auto,q_auto/v1611538303/jmendezconstructorasa/aboutBackgroundImage')
 			center/cover no-repeat;
-		position: relative;
 		border-radius: var(--border-radius) 0 0 var(--border-radius);
 		box-shadow: var(--box-shadow);
 		float: left;
-
-		&::before {
-			content: '';
-			height: 100%;
-			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: rgba(var(--color-primary-rgb), 0.85);
-			border-radius: var(--border-radius) 0 0 var(--border-radius);
-		}
-
-		.about__mission-text {
-			color: var(--color-font__normal-light);
-			position: relative;
-			z-index: 100;
-		}
+		position: relative;
 
 		@include max-breakpoint('large') {
 			border-radius: var(--border-radius);
@@ -65,20 +51,37 @@
 				border-radius: var(--border-radius);
 			}
 		}
+
+		&::before {
+			background-color: rgba(var(--color-primary-rgb), 0.85);
+			border-radius: var(--border-radius) 0 0 var(--border-radius);
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.about__mission-text {
+			color: var(--color-font__normal-light);
+			position: relative;
+			z-index: 100;
+		}
 	}
 
 	.about__vission {
 		@include max-breakpoint('large') {
-			box-shadow: var(--box-shadow);
 			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
 		}
 	}
 
 	.about__mission-container,
 	.about__vission-container {
+		display: block;
 		height: 350px;
 		width: 85%;
-		display: block;
 
 		@include max-breakpoint('xxlarge') {
 			height: auto;
@@ -87,26 +90,26 @@
 
 	.about__mission-header,
 	.about__vission-header {
-		transform: none;
 		margin-bottom: 30px;
+		transform: none;
 	}
 
 	.about__quote {
-		color: var(--color-font__normal-light);
+		backdrop-filter: blur(40px);
+		backdrop-filter: blur(40px);
+		background: var(--color-tertiary) center/cover no-repeat;
 		border-radius: var(--border-radius);
 		box-shadow: var(--box-shadow);
-		height: 175px;
-		width: 682px;
+		color: var(--color-font__normal-light);
 		display: grid;
-		place-items: center;
-		text-align: center;
-		background: var(--color-tertiary) center/cover no-repeat;
-		backdrop-filter: blur(40px);
-		-webkit-backdrop-filter: blur(40px);
-		opacity: 0.9;
-		position: relative;
+		height: 175px;
 		left: 50%;
+		opacity: 0.9;
+		place-items: center;
+		position: relative;
+		text-align: center;
 		transform: translate(-50%, -35%);
+		width: 682px;
 
 		@include max-breakpoint('large') {
 			display: none;

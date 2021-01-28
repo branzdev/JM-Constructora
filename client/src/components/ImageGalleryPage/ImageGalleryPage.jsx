@@ -2,35 +2,8 @@ import React, { useLayoutEffect } from 'react';
 //styles
 import './imageGalleryPage.scss';
 //components
-import Image from '../Image/Image';
+import ImageGalleryImage from '../ImageGalleryImage/ImageGalleryImage';
 //images
-import img1 from '../../img/imageGallery1.jpg';
-import img2 from '../../img/imageGallery2.jpg';
-import img3 from '../../img/imageGallery3.jpg';
-import img4 from '../../img/imageGallery4.jpg';
-import img5 from '../../img/imageGallery5.jpg';
-import img6 from '../../img/imageGallery6.jpg';
-import img7 from '../../img/imageGallery7.jpg';
-import img8 from '../../img/imageGallery8.jpg';
-import img9 from '../../img/imageGallery9.jpg';
-import img10 from '../../img/imageGallery10.jpg';
-import img11 from '../../img/imageGallery11.jpg';
-import img12 from '../../img/imageGallery12.jpg';
-import img13 from '../../img/imageGallery13.jpg';
-import img14 from '../../img/imageGallery14.jpg';
-import img15 from '../../img/imageGallery15.jpg';
-import img16 from '../../img/imageGallery16.jpg';
-import img17 from '../../img/imageGallery17.jpg';
-import img18 from '../../img/imageGallery18.jpg';
-import img19 from '../../img/imageGallery19.jpg';
-import img20 from '../../img/imageGallery20.jpg';
-import img21 from '../../img/imageGallery21.jpg';
-import img22 from '../../img/imageGallery22.jpg';
-import img23 from '../../img/imageGallery23.jpg';
-import img24 from '../../img/imageGallery24.jpg';
-import img25 from '../../img/imageGallery25.jpg';
-import img26 from '../../img/imageGallery26.JPG';
-import img27 from '../../img/imageGallery27.JPG';
 
 export default function ImageGalleryPage() {
 	useLayoutEffect(() => {
@@ -62,138 +35,138 @@ export default function ImageGalleryPage() {
 				</div>
 			</div>
 			<div className="imageGalleryPage__images-container">
-				<Image
-					image={img1}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery1"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img2}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery2"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img3}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery3"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img4}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery4"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img5}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery5"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img6}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery6"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img7}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery7"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img8}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery8"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img9}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery9"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img10}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery10"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img11}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery11"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img12}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery12"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img13}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery13"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img14}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery14"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img15}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery15"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img16}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery16"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img17}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery17"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img18}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery18"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img19}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery19"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img20}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery20"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img21}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery21"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img22}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery22"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img23}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery23"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img24}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery24"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img25}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery25"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img26}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery26"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>
-				<Image
-					image={img27}
+				<ImageGalleryImage
+					publicId="jmendezconstructorasa/imageGallery27"
 					alt="JMéndez Constructora Imágenes"
 					className="imageGalleryPage__images-img"
 				/>

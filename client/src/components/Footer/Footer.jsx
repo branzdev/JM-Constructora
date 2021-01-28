@@ -1,17 +1,11 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { Image, Placeholder } from 'cloudinary-react';
+
 //styles
 import './footer.scss';
 //components
 import GoogleMap from '../GoogleMap/GoogleMap';
-//images
-import whatsapp from '../../img/whatsapp.svg';
-import facebook from '../../img/facebook.svg';
-import instagram from '../../img/instagram.svg';
-import phone from '../../img/phone.svg';
-import mail from '../../img/mail.svg';
-import home from '../../img/home.svg';
-import logoContact from '../../img/logoContact.jpg';
 
 export default function Footer() {
 	return (
@@ -24,11 +18,17 @@ export default function Footer() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img
-						src={whatsapp}
+					<Image
 						className="footer__socials-image footer__socials-image--whatsapp"
+						cloudName="bmongemendez"
+						publicId="jmendezconstructorasa/whatsapp.svg"
+						dpr="auto"
+						quality="auto"
+						loading="lazy"
 						alt="JMéndez Constructora whatsapp"
-					/>
+					>
+						<Placeholder />
+					</Image>
 				</a>
 				<a
 					className="footer__socials-link footer__socials-link--facebook"
@@ -36,11 +36,17 @@ export default function Footer() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img
-						src={facebook}
+					<Image
 						className="footer__socials-image footer__socials-image--facebook"
+						cloudName="bmongemendez"
+						publicId="jmendezconstructorasa/facebook.svg"
+						dpr="auto"
+						quality="auto"
+						loading="lazy"
 						alt="JMéndez Constructora facebook"
-					/>
+					>
+						<Placeholder />
+					</Image>
 				</a>
 				<a
 					className="footer__socials-link footer__socials-link--instagram"
@@ -48,25 +54,48 @@ export default function Footer() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img
-						src={instagram}
+					<Image
 						className="footer__socials-image footer__socials-image--instagram"
+						cloudName="bmongemendez"
+						publicId="jmendezconstructorasa/instagram.svg"
+						dpr="auto"
+						quality="auto"
+						loading="lazy"
 						alt="JMéndez Constructora instagram"
-					/>
+					>
+						<Placeholder />
+					</Image>
 				</a>
 				<a
 					className="footer__socials-link footer__socials-link--phone"
 					href="tel:+506-8815-8298"
 				>
-					<img
-						src={phone}
+					<Image
 						className="footer__socials-image footer__socials-image--phone"
+						cloudName="bmongemendez"
+						publicId="jmendezconstructorasa/phone.svg"
+						dpr="auto"
+						quality="auto"
+						loading="lazy"
 						alt="JMéndez Constructora teléfono"
-					/>
+					>
+						<Placeholder />
+					</Image>
 				</a>
 			</div>
 			<div className="footer__content">
-				<img src={logoContact} alt="" className="footer_content-logo" />
+				<Image
+					className="footer_content-logo"
+					cloudName="bmongemendez"
+					publicId="jmendezconstructorasa/logoContact"
+					fetchFormat="auto"
+					dpr="auto"
+					quality="auto"
+					loading="lazy"
+					alt="Logo JMéndez Constructora"
+				>
+					<Placeholder />
+				</Image>
 				<ul className="footer__content-sitemap">
 					<li className="footer__content-sitemap-item">
 						<Link
@@ -136,7 +165,7 @@ export default function Footer() {
 				<div className="footer__content-location-container">
 					<div className="footer__content-location-background"></div>
 					<div className="footer__content-location-map">
-						<GoogleMap />
+						{/* <GoogleMap /> */}
 					</div>
 				</div>
 			</div>
@@ -152,12 +181,18 @@ export default function Footer() {
 						href="tel:+506-8815-8298"
 						className="footer__bottom-line-image-link"
 					>
-						<img
-							src={phone}
-							alt=""
-							title="Llamar"
+						<Image
 							className="footer__bottom-line-image footer__bottom-line-phone-img"
-						/>
+							cloudName="bmongemendez"
+							publicId="jmendezconstructorasa/phone.svg"
+							dpr="auto"
+							quality="auto"
+							loading="lazy"
+							alt="Phone Logo"
+							title="Llamar"
+						>
+							<Placeholder />
+						</Image>
 					</a>
 					<a
 						href="tel:+506-8815-8298"
@@ -174,12 +209,18 @@ export default function Footer() {
 						href="mailto:info@jmendezconstructorasa.com"
 						className="footer__bottom-line-image-link"
 					>
-						<img
-							src={mail}
-							alt=""
-							title="Enviar Email"
+						<Image
 							className="footer__bottom-line-image footer__bottom-line-mail-img"
-						/>
+							cloudName="bmongemendez"
+							publicId="jmendezconstructorasa/mail.svg"
+							dpr="auto"
+							quality="auto"
+							loading="lazy"
+							alt="Email Logo"
+							title="Enviar Email"
+						>
+							<Placeholder />
+						</Image>
 					</a>
 
 					<a
@@ -200,12 +241,18 @@ export default function Footer() {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<img
-							src={home}
-							title="Como LLegar?"
-							alt=""
+						<Image
 							className="footer__bottom-line-image footer__bottom-line-address-img"
-						/>
+							cloudName="bmongemendez"
+							publicId="jmendezconstructorasa/home.svg"
+							dpr="auto"
+							quality="auto"
+							loading="lazy"
+							alt="Home Logo"
+							title="Como LLegar?"
+						>
+							<Placeholder />
+						</Image>
 					</a>
 					<a
 						href="https://www.google.com/maps/dir//JM%C3%A9ndez+Constructora+S.A,+Calle+Girasol,+Alajuela+Province,+San+Ramon/@10.1103027,-84.4619438,17z/"

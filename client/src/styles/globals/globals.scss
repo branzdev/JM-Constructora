@@ -5,11 +5,11 @@
 }
 
 .header1 {
-	font: var(--font-header1);
+	@extend %disable-select;
 
 	display: inline-block;
+	font: var(--font-header1);
 	position: relative;
-	@extend %disable-select;
 }
 
 .header1--dark {
@@ -21,13 +21,13 @@
 }
 
 .header-container {
-	margin-bottom: 80px;
 	height: 116px;
+	margin-bottom: 80px;
 	position: relative;
 
 	@include max-breakpoint('medium') {
-		display: flex;
 		align-items: center;
+		display: flex;
 		flex-direction: column;
 	}
 
@@ -37,11 +37,12 @@
 }
 
 .header2 {
-	font: var(--font-header2);
+	@extend %disable-select;
+
 	display: inline-block;
+	font: var(--font-header2);
 	position: relative;
 	transform: translate(-50%, 100%);
-	@extend %disable-select;
 
 	@include max-breakpoint('medium') {
 		position: relative;
@@ -63,8 +64,8 @@
 
 .sweet-alert2__container {
 	background: rgba(var(--color-tertiary-rgb), 0.8) !important;
-	font: var(--font-normal__raleway) !important;
 	border-radius: var(--border-radius) !important;
+	font: var(--font-normal__raleway) !important;
 
 	.sweet-alert2__title {
 		font: var(--font-header2) !important;
@@ -78,7 +79,8 @@
 		background: var(--color-body) !important;
 		border-radius: inherit !important;
 	}
-	/* 
+
+	/*
 	.sweet-alert2__title {
 	}
  	*/
@@ -93,8 +95,8 @@
 //Toast
 
 .sweet-alert2__container-toast {
-	font: var(--font-normal__raleway) !important;
 	border-radius: var(--border-radius) !important;
+	font: var(--font-normal__raleway) !important;
 
 	@include max-breakpoint('small') {
 		width: 100% !important;

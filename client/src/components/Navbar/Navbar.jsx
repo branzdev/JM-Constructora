@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { HashLink as Link } from 'react-router-hash-link';
-
 //styles
 import './navbar.scss';
 //images
@@ -41,13 +40,11 @@ export default function Navbar() {
 						info@jmendezconstructorasa.com
 					</a>
 				</li>
-				<li className="navbar__list-item ">
+				<li className="navbar__list-item navbar__list-item--logo">
 					<Link
 						to="/#homeSection"
 						className="navbar__list-item-link navbar__list-item-link--logo disable-select"
-					>
-						<div className="navbar__list-item-link-image" alt=""></div>
-					</Link>
+					/>
 				</li>
 			</ul>
 		</motion.nav>

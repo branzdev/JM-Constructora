@@ -1,19 +1,19 @@
-@import '../../styles/index.scss';
+@import '../../styles/index';
 
 .servicesPageCard {
-	height: 300px;
-	width: 350px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
+	cursor: pointer;
 	display: inline-grid;
+	font: var(--font-normal__raleway);
 	grid-template-rows: repeat(2, 1fr);
+	height: 300px;
+	overflow: hidden;
 	place-items: center;
 	position: relative;
-	font: var(--font-normal__raleway);
-	overflow: hidden;
-	transition: all ease-out 0.3s;
-	cursor: pointer;
 	text-decoration: none;
+	transition: all ease-out 0.3s;
+	width: 350px;
 
 	@include max-breakpoint('large') {
 		height: 250px;
@@ -22,8 +22,8 @@
 
 	@include max-breakpoint('medium') {
 		height: 300px;
-		width: 350px;
 		margin-bottom: 50px;
+		width: 350px;
 
 		&:last-child() {
 			margin-bottom: 0;
@@ -35,36 +35,15 @@
 		width: 250px;
 	}
 
-	&:hover {
-		&::before {
-			content: '';
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			background: var(--color-tertiary);
-			opacity: 0.1;
-		}
-
-		.servicesPageCard__image {
-			transform: scale(1.03);
-		}
-
-		.servicesPageCard__link {
-			opacity: 1;
-		}
-
-		.servicesPageCard__text-container {
-			transform: translateY(0);
-		}
-	}
-
 	.servicesPageCard__image {
-		height: 200px;
-		transition: inherit;
 		@extend %disable-select;
+
 		grid-row: 1/2;
+		height: 200px;
+		object-fit: contain;
+		object-position: center;
+		transition: inherit;
+		width: 100%;
 
 		@include max-breakpoint('large') {
 			height: 150px;
@@ -80,34 +59,58 @@
 	}
 
 	.servicesPageCard__text-container {
-		width: 100%;
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		grid-row: 2/3;
 		transform: translateY(64%);
 		transition: inherit;
-		grid-row: 2/3;
+		width: 100%;
+	}
+
+	&:hover {
+		&::before {
+			background: var(--color-tertiary);
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.servicesPageCard__image {
+			transform: scale(1.03);
+		}
+
+		.servicesPageCard__link {
+			opacity: 1;
+		}
+
+		.servicesPageCard__text-container {
+			transform: translateY(0);
+		}
 	}
 
 	.servicesPageCard__text {
-		color: var(--color-font__normal-dark);
 		border-top: 1px solid var(--color-tertiary);
-		width: 80%;
+		color: var(--color-font__normal-dark);
 		text-align: center;
+		width: 80%;
 	}
 
 	.servicesPageCard__text-quotation {
-		color: var(--color-font__normal-light);
-		font-weight: 700;
-		font-size: 27px;
-		width: 100%;
-		text-align: center;
-		background: transparent
-			linear-gradient(
-				180deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%
-			)
+		background:
+			transparent
+			linear-gradient(180deg,
+			var(--color-primary) 0%,
+			var(--color-secondary) 100%)
 			center/cover no-repeat;
+		color: var(--color-font__normal-light);
+		font-size: 27px;
+		font-weight: 700;
+		text-align: center;
+		width: 100%;
 	}
 }

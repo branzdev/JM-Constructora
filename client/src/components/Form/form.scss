@@ -1,22 +1,24 @@
 @import '../../styles/index.scss';
 
 .form {
-	height: 535px;
-	width: 1158px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	background: transparent url(../../img/formBackgroundImage.jpg) center/cover
-		no-repeat;
-	display: grid;
-	place-items: center;
+	background:
+		transparent
+		url('https://res.cloudinary.com/bmongemendez/image/upload/w_1158,h_535,dpr_auto,c_fill,f_auto,q_auto/v1611538303/jmendezconstructorasa/formBackgroundImage')
+		center/cover no-repeat;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
+	display: grid;
+	height: 535px;
+	left: 50%;
+	place-items: center;
+	position: relative;
+	transform: translateX(-50%);
+	width: 1158px;
 
 	@include max-breakpoint('xlarge') {
-		width: 783px;
 		height: auto;
 		padding: 40px;
+		width: 783px;
 	}
 
 	@include max-breakpoint('large') {
@@ -26,6 +28,7 @@
 	@include max-breakpoint('medium') {
 		padding: 30px;
 		width: 100%;
+
 		.form__decoration-top-right,
 		.form__decoration-bottom-left {
 			display: none;
@@ -37,129 +40,127 @@
 	}
 
 	&::after {
-		content: '';
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
 		background-color: var(--color-primary);
-		opacity: 0.85;
 		border-radius: var(--border-radius);
+		content: '';
+		height: 100%;
+		left: 0;
+		opacity: 0.85;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 
 	.form__decoration-top-right {
-		height: 170px;
-		width: 170px;
-		position: absolute;
-		top: 0;
-		right: 0;
 		border-radius: var(--border-radius);
+		height: 170px;
+		position: absolute;
+		right: 0;
+		top: 0;
 		transform: translate(75px, -75px);
+		width: 170px;
 
 		&::before {
+			background:
+				transparent
+				linear-gradient(270deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%)
+				center/cover no-repeat;
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
 			content: '';
 			height: 5px;
-			width: 100%;
-			background: transparent
-				linear-gradient(
-					270deg,
-					var(--color-primary) 0%,
-					var(--color-secondary) 100%
-				)
-				center/cover no-repeat;
+			left: 0;
 			position: absolute;
 			top: 0;
-			left: 0;
-			box-shadow: var(--box-shadow);
-			border-radius: var(--border-radius);
+			width: 100%;
 		}
+
 		&::after {
+			background:
+				transparent
+				linear-gradient(180deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%)
+				center/cover no-repeat;
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
 			content: '';
 			height: 100%;
-			width: 5px;
-			background: transparent
-				linear-gradient(
-					180deg,
-					var(--color-primary) 0%,
-					var(--color-secondary) 100%
-				)
-				center/cover no-repeat;
 			position: absolute;
-			top: 0;
 			right: 0;
-			box-shadow: var(--box-shadow);
-			border-radius: var(--border-radius);
+			top: 0;
+			width: 5px;
 		}
 	}
 
 	.form__decoration-bottom-left {
-		height: 340px;
-		width: 340px;
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		border-radius: var(--border-radius);
+		bottom: 0;
+		height: 340px;
+		left: 0;
+		position: absolute;
 		transform: translate(-75px, 75px);
+		width: 340px;
 
 		&::before {
+			background:
+				transparent
+				linear-gradient(270deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%)
+				center/cover no-repeat;
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
 			content: '';
 			height: 100%;
-			width: 5px;
-			background: transparent
-				linear-gradient(
-					270deg,
-					var(--color-primary) 0%,
-					var(--color-secondary) 100%
-				)
-				center/cover no-repeat;
+			left: 0;
 			position: absolute;
 			top: 0;
-			left: 0;
-			box-shadow: var(--box-shadow);
-			border-radius: var(--border-radius);
+			width: 5px;
 		}
+
 		&::after {
+			background:
+				transparent
+				linear-gradient(180deg,
+				var(--color-primary) 0%,
+				var(--color-secondary) 100%)
+				center/cover no-repeat;
+			border-radius: var(--border-radius);
+			bottom: 0;
+			box-shadow: var(--box-shadow);
 			content: '';
 			height: 5px;
-			width: 100%;
-			background: transparent
-				linear-gradient(
-					180deg,
-					var(--color-primary) 0%,
-					var(--color-secondary) 100%
-				)
-				center/cover no-repeat;
 			position: absolute;
-			bottom: 0;
 			right: 0;
-			box-shadow: var(--box-shadow);
-			border-radius: var(--border-radius);
+			width: 100%;
 		}
 	}
 
 	.form__container {
-		width: 1025px;
-		height: 365px;
-		position: relative;
-		z-index: 100;
+		column-gap: 95px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(4, 1fr);
+		height: 365px;
+		position: relative;
 		row-gap: 35px;
-		column-gap: 95px;
+		width: 1025px;
+		z-index: 100;
 
 		@include max-breakpoint('xlarge') {
 			column-gap: 0;
-			width: 650px;
-			height: auto;
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(3, 1fr) 195px 1fr;
+			height: auto;
+			width: 650px;
 		}
 
 		@include max-breakpoint('large') {
-			width: 100%;
 			padding: 0;
+			width: 100%;
 		}
 
 		@include max-breakpoint('xsmall') {
@@ -167,11 +168,19 @@
 		}
 
 		.form__input-container {
-			border-radius: var(--border-radius);
 			background: var(--color-body);
+			border-radius: var(--border-radius);
 			box-shadow: var(--box-shadow);
 			padding: 15px 30px;
 			position: relative;
+
+			@include max-breakpoint('xlarge') {
+				&:nth-child(4) {
+					grid-column: 1 / 2;
+					grid-row: 4 / 5;
+					height: 100%;
+				}
+			}
 
 			&:nth-child(1) {
 				grid-column: 1 / 2;
@@ -189,38 +198,53 @@
 			}
 
 			&:nth-child(4) {
-				height: 100%;
 				grid-column: 2 / 3;
 				grid-row: 1 / 4;
+				height: 100%;
 			}
 
-			@include max-breakpoint('xlarge') {
-				&:nth-child(4) {
-					height: 100%;
-					grid-column: 1 / 2;
-					grid-row: 4 / 5;
+			.form__input-line {
+				background-color: var(--color-primary);
+				height: 1px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				top: 0;
+				transform: scaleX(0);
+				transform-origin: left;
+				width: 100%;
+
+				@keyframes inputLineAnimation {
+					from {
+						transform: scaleX(0);
+					}
+
+					to {
+						transform: scaleX(1);
+					}
 				}
 			}
 
 			.form__input {
-				height: 100%;
-				width: 100%;
-				position: relative;
-				background: none;
-				border: none;
-				font: var(--font-normal__raleway);
 				@include placeholderStyle(
 					color,
 					rgba(var(--color-font__normal-dark-rgb), 0.5)
 				);
 				@include placeholderStyle(text-transform, uppercase);
-				text-transform: uppercase;
+
+				background: none;
+				border: none;
+				font: var(--font-normal__raleway);
+				height: 100%;
 				-moz-outline: none;
 				outline: none;
+				position: relative;
+				text-transform: uppercase;
+				width: 100%;
 
 				&:focus + .form__input-line {
-					transform: scaleX(1);
 					animation: 0.3s forwards inputLineAnimation ease-out;
+					transform: scaleX(1);
 				}
 			}
 
@@ -228,45 +252,19 @@
 				@include placeholderStyle(color, rgba(red, 0.5));
 			}
 
-			.form__input-line {
-				width: 100%;
-				height: 1px;
-				background-color: var(--color-primary);
-				position: relative;
-				top: 0;
-				margin: 0;
-				padding: 0;
-				transform: scaleX(0);
-				transform-origin: left;
-
-				@keyframes inputLineAnimation {
-					from {
-						transform: scaleX(0);
-					}
-					to {
-						transform: scaleX(1);
-					}
-				}
-			}
-
-			.form__input-line.form__input-required {
-				/* 	background-color: rgba(255, 0, 0, 0.5);
-				transform: scaleX(1); */
-			}
-
 			.form__textArea {
-				resize: none;
 				overflow: auto;
+				resize: none;
 				vertical-align: top;
 			}
 		}
 
 		.form__button {
-			height: 100%;
-			width: 100%;
 			grid-column: 1 / 3;
 			grid-row: 4 / 5;
+			height: 100%;
 			padding: 0;
+			width: 100%;
 
 			@include max-breakpoint('xlarge') {
 				grid-column: 1 / 2;
@@ -275,7 +273,7 @@
 		}
 	}
 
-	/* 	
+	/*
 
    ---- BORDER GRADIENT----
 
@@ -294,7 +292,7 @@
 	}
 
 	.form__decoration-top-right::after {
-		content: '';
+		content: '' ;
 		position: absolute;
 		border-radius: inherit;
 		top: 0;

@@ -1,23 +1,37 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import { Image, Placeholder } from 'cloudinary-react';
 //styles
 import './home.scss';
 //components
 import Button from '../Button/Button';
-//images
-import logoMinimal from '../../img/logoMinimal.svg';
 
 export default function Home(props) {
-	const homeIntroContainerRef = useRef();
+	const homeRef = useRef();
+
+	const [homeImageHeihgt, setHomeImageHeihgt] = useState(691);
 
 	useEffect(() => {
+		const homeElement = homeRef.current;
+
+		setHomeImageHeihgt(
+			homeElement
+				.querySelector('.home__image-container')
+				.getBoundingClientRect().height
+		);
+
+		console.log(homeImageHeihgt);
+
+		//GSAP ANIMATION
 		const tl = gsap.timeline({
 			defaults: {
 				ease: 'power1.out',
 			},
 		});
 
-		const homeIntroContainer = homeIntroContainerRef.current;
+		const homeIntroContainer = homeElement.querySelector(
+			'.home__intro-container'
+		);
 
 		let hasPlayed = window.sessionStorage.getItem('hasAnimationPlayed');
 
@@ -33,7 +47,7 @@ export default function Home(props) {
 			);
 
 			tl.to(homeIntroContainer.querySelectorAll('.home__intro-text'), {
-				y: '0%',
+				y: '0',
 				duration: 1,
 				stagger: 0.5,
 			});
@@ -48,7 +62,7 @@ export default function Home(props) {
 			);
 
 			tl.to(
-				homeIntroContainer.querySelector('.home__intro-image'),
+				homeIntroContainer.querySelector('.home__intro-image-container'),
 				{
 					opacity: '1',
 					y: '-50%',
@@ -70,16 +84,41 @@ export default function Home(props) {
 		}
 	}, []);
 
+	/* 	const getHeight = (containerElement) => {
+		const container = homeElement.querySelector(`.${containerElement}`);
+		const containerHeight = container.getBoundingClientRect().height;
+		console.log(containerHeight);
+		return containerHeight;
+	};
+
+	getHeight('home__image-container'); */
+
 	const handleOnClick = () => {
 		window.location.href = '/#servicesSection';
 	};
 
 	return (
-		<div id="homeSection" className="home section">
-			<div className="home__image"></div>
+		<div ref={homeRef} id="homeSection" className="home section">
+			<div className="home__image-container">
+				<Image
+					fetchFormat="auto"
+					className="home__image"
+					cloudName="bmongemendez"
+					publicId="jmendezconstructorasa/homeImage"
+					responsive
+					loading="lazy"
+					alt="Excavadora"
+					width="auto"
+					height={homeImageHeihgt}
+					crop="fill"
+					dpr="auto"
+					quality="auto"
+					// flags="ignore_aspect_ratio"
+				>
+					<Placeholder />
+				</Image>
+			</div>
 			<div className="home__items">
-				<div className="home__items-line"></div>
-				<div className="home__items-line"></div>
 				<div className="home__items-slogan">
 					<div className="home__items-slogan-background"></div>
 					<div className="home__items-slogan-text">"Imagina, Crea, Innova"</div>
@@ -90,12 +129,26 @@ export default function Home(props) {
 					text="Nuestros Servicios"
 				/>
 			</div>
-			<div ref={homeIntroContainerRef} className="home__intro-container">
-				<img
-					className="home__intro-image"
-					src={logoMinimal}
-					alt="Lgo JMéndez Constructora"
-				/>
+			<div className="home__intro-container">
+				<div className="home__intro-image-container">
+					<Image
+						cloudName="bmongemendez"
+						publicId="jmendezconstructorasa/logoMinimal"
+						responsive
+						// loading="lazy"
+						className="home__intro-image"
+						alt="Logo JMéndez Constructora"
+						width="auto"
+						crop="fill"
+						dpr="auto"
+						fetchFormat="auto"
+						quality="auto"
+						// flags="ignore_aspect_ratio"
+					>
+						<Placeholder />
+					</Image>
+				</div>
+
 				<div className="home__intro-text-container">
 					<h1 className="hide">
 						<span className="home__intro-text">Imagina,</span>

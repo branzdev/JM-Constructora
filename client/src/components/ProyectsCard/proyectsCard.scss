@@ -37,8 +37,9 @@
 
 	&::before {
 		content: '';
-		background: transparent url('../../img/paperBackground.jpg') center/cover
-			no-repeat;
+		background: transparent
+			url('https://res.cloudinary.com/bmongemendez/image/upload/w_auto,dpr_auto,c_scale,f_auto,q_auto/v1611538296/jmendezconstructorasa/paperBackground')
+			center/cover no-repeat;
 		height: 100%;
 		width: 100%;
 		top: 0;
@@ -47,20 +48,23 @@
 		border-radius: var(--border-radius);
 		opacity: 0.4;
 	}
-	.proyectsCard__image {
+	.proyectsCard__image-container {
 		width: 308px;
 		height: 100%;
-		display: block;
-		object-fit: cover;
-		object-position: center;
-		display: flex;
 		position: absolute;
 		right: 0;
-		border-radius: var(--border-radius);
-		box-shadow: var(--box-shadow);
 
 		@include max-breakpoint('xsmall') {
 			width: 208px;
+		}
+
+		.proyectsCard__image{
+			border-radius: var(--border-radius);
+			box-shadow: var(--box-shadow);
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
 		}
 	}
 	.proyectsCard__text-container {
@@ -84,6 +88,12 @@
 		align-items: center;
 		backdrop-filter: blur(7px);
 		-webkit-backdrop-filter: blur(7px);
+
+		@include max-breakpoint('large') {
+			height: 125px;
+			width: 298px;
+			left: 5%;
+		}
 
 		@include max-breakpoint('small') {
 			height: 125px;
