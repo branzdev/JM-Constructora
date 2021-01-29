@@ -75,7 +75,7 @@ export default function Form(props) {
 			setIsRequired(defaultIsRequired);
 			axios({
 				method: 'POST',
-				url: '/sendMail',
+				url: '/api/sendMail',
 				data: formData,
 			})
 				.then((response) => {

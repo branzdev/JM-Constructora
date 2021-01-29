@@ -82,7 +82,7 @@ export default function Home(props) {
 				duration: 0,
 			});
 		}
-	}, []);
+	}, [homeImageHeihgt]);
 
 	/* 	const getHeight = (containerElement) => {
 		const container = homeElement.querySelector(`.${containerElement}`);

@@ -1,8 +1,7 @@
 @import '../../styles/index.scss';
 
 .form {
-	background:
-		transparent
+	background: transparent
 		url('https://res.cloudinary.com/bmongemendez/image/upload/w_1158,h_535,dpr_auto,c_fill,f_auto,q_auto/v1611538303/jmendezconstructorasa/formBackgroundImage')
 		center/cover no-repeat;
 	border-radius: var(--border-radius);
@@ -61,11 +60,12 @@
 		width: 170px;
 
 		&::before {
-			background:
-				transparent
-				linear-gradient(270deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%)
+			background: transparent
+				linear-gradient(
+					270deg,
+					var(--color-primary) 0%,
+					var(--color-secondary) 100%
+				)
 				center/cover no-repeat;
 			border-radius: var(--border-radius);
 			box-shadow: var(--box-shadow);
@@ -78,11 +78,12 @@
 		}
 
 		&::after {
-			background:
-				transparent
-				linear-gradient(180deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%)
+			background: transparent
+				linear-gradient(
+					180deg,
+					var(--color-primary) 0%,
+					var(--color-secondary) 100%
+				)
 				center/cover no-repeat;
 			border-radius: var(--border-radius);
 			box-shadow: var(--box-shadow);
@@ -105,11 +106,12 @@
 		width: 340px;
 
 		&::before {
-			background:
-				transparent
-				linear-gradient(270deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%)
+			background: transparent
+				linear-gradient(
+					270deg,
+					var(--color-primary) 0%,
+					var(--color-secondary) 100%
+				)
 				center/cover no-repeat;
 			border-radius: var(--border-radius);
 			box-shadow: var(--box-shadow);
@@ -122,11 +124,12 @@
 		}
 
 		&::after {
-			background:
-				transparent
-				linear-gradient(180deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%)
+			background: transparent
+				linear-gradient(
+					180deg,
+					var(--color-primary) 0%,
+					var(--color-secondary) 100%
+				)
 				center/cover no-repeat;
 			border-radius: var(--border-radius);
 			bottom: 0;
@@ -231,7 +234,6 @@
 					rgba(var(--color-font__normal-dark-rgb), 0.5)
 				);
 				@include placeholderStyle(text-transform, uppercase);
-
 				background: none;
 				border: none;
 				font: var(--font-normal__raleway);
@@ -239,7 +241,6 @@
 				-moz-outline: none;
 				outline: none;
 				position: relative;
-				text-transform: uppercase;
 				width: 100%;
 
 				&:focus + .form__input-line {

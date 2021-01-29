@@ -1,18 +1,14 @@
 @import '../../styles/index.scss';
 
 .proyectsCard {
-	height: 576px;
-	width: 538px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
-	position: relative;
-	margin-right: 110px;
 	display: inline-block;
+	height: 576px;
+	margin-right: 110px;
+	position: relative;
 	white-space: normal;
-
-	&:last-child {
-		margin-right: 15px;
-	}
+	width: 538px;
 
 	@include max-breakpoint('xlarge') {
 		height: 476px;
@@ -26,8 +22,8 @@
 
 	@include max-breakpoint('small') {
 		height: 388px;
-		width: 350px;
 		margin-right: 50px;
+		width: 350px;
 	}
 
 	@include max-breakpoint('xsmall') {
@@ -35,73 +31,78 @@
 		width: 250px;
 	}
 
+	&:last-child {
+		margin-right: 15px;
+	}
+
 	&::before {
-		content: '';
-		background: transparent
+		background:
+			transparent
 			url('https://res.cloudinary.com/bmongemendez/image/upload/w_auto,dpr_auto,c_scale,f_auto,q_auto/v1611538296/jmendezconstructorasa/paperBackground')
 			center/cover no-repeat;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		position: absolute;
 		border-radius: var(--border-radius);
+		content: '';
+		height: 100%;
+		left: 0;
 		opacity: 0.4;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
+
 	.proyectsCard__image-container {
-		width: 308px;
 		height: 100%;
 		position: absolute;
 		right: 0;
+		width: 308px;
 
 		@include max-breakpoint('xsmall') {
 			width: 208px;
 		}
 
-		.proyectsCard__image{
+		.proyectsCard__image {
 			border-radius: var(--border-radius);
 			box-shadow: var(--box-shadow);
 			height: 100%;
-			width: 100%;
 			object-fit: cover;
 			object-position: center;
+			width: 100%;
 		}
 	}
+
 	.proyectsCard__text-container {
-		height: 171px;
-		width: 348px;
+		align-items: center;
+		backdrop-filter: blur(7px);
+		background:
+			transparent
+			linear-gradient(90deg,
+			var(--color-primary) 0%,
+			var(--color-secondary) 100%)
+			center/cover no-repeat;
 		border-radius: var(--border-radius);
 		box-shadow: var(--box-shadow);
+		display: flex;
+		height: 171px;
+		justify-content: center;
+		left: 56px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: 56px;
-		background: transparent
-			linear-gradient(
-				90deg,
-				var(--color-primary) 0%,
-				var(--color-secondary) 100%
-			)
-			center/cover no-repeat;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		backdrop-filter: blur(7px);
-		-webkit-backdrop-filter: blur(7px);
+		width: 348px;
 
 		@include max-breakpoint('large') {
 			height: 125px;
-			width: 298px;
 			left: 5%;
+			width: 298px;
 		}
 
 		@include max-breakpoint('small') {
-			height: 125px;
-			width: 298px;
-			top: unset;
 			bottom: 0;
+			height: 125px;
 			left: 50%;
+			top: unset;
 			transform: translate(-50%, 50%);
+			width: 298px;
 		}
 
 		@include max-breakpoint('xsmall') {
@@ -111,9 +112,9 @@
 	}
 
 	.proyectsCard__tex {
-		max-width: 222px;
-		font: var(--font-normal__raleway);
 		color: var(--color-font__normal-light);
+		font: var(--font-normal__raleway);
+		max-width: 222px;
 		text-align: center;
 		text-transform: uppercase;
 	}

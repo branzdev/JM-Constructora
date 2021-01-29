@@ -5,11 +5,11 @@
 }
 
 .header1 {
-	@extend %disable-select;
+	font: var(--font-header1);
 
 	display: inline-block;
-	font: var(--font-header1);
 	position: relative;
+	@extend %disable-select;
 }
 
 .header1--dark {
@@ -21,13 +21,13 @@
 }
 
 .header-container {
-	height: 116px;
 	margin-bottom: 80px;
+	height: 116px;
 	position: relative;
 
 	@include max-breakpoint('medium') {
-		align-items: center;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 	}
 
@@ -37,12 +37,11 @@
 }
 
 .header2 {
-	@extend %disable-select;
-
-	display: inline-block;
 	font: var(--font-header2);
+	display: inline-block;
 	position: relative;
 	transform: translate(-50%, 100%);
+	@extend %disable-select;
 
 	@include max-breakpoint('medium') {
 		position: relative;
@@ -64,8 +63,8 @@
 
 .sweet-alert2__container {
 	background: rgba(var(--color-tertiary-rgb), 0.8) !important;
-	border-radius: var(--border-radius) !important;
 	font: var(--font-normal__raleway) !important;
+	border-radius: var(--border-radius) !important;
 
 	.sweet-alert2__title {
 		font: var(--font-header2) !important;
@@ -77,15 +76,16 @@
 
 	.sweet-alert2__popup {
 		background: var(--color-body) !important;
+
 		border-radius: inherit !important;
 	}
-
 	/*
 	.sweet-alert2__title {
 	}
  	*/
 	.sweet-alert2__confirm-button {
 		background: var(--color-secondary) !important;
+
 		border-radius: var(--border-radius) !important;
 		font: var(--font-normal__raleway) !important;
 		line-height: initial !important;
@@ -95,8 +95,8 @@
 //Toast
 
 .sweet-alert2__container-toast {
-	border-radius: var(--border-radius) !important;
 	font: var(--font-normal__raleway) !important;
+	border-radius: var(--border-radius) !important;
 
 	@include max-breakpoint('small') {
 		width: 100% !important;
@@ -119,6 +119,9 @@
 		background: var(--color-secondary) !important;
 		border-radius: var(--border-radius) !important;
 		font: var(--font-normal__raleway) !important;
+
 		line-height: initial !important;
+
 	}
+
 }

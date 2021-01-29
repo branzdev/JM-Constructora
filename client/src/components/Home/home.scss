@@ -1,4 +1,4 @@
-@import '../../styles/index.scss';
+@import '../../styles/index';
 
 .home {
 	align-items: center;
@@ -15,7 +15,8 @@
 
 		&::after {
 			background-image:
-				linear-gradient(90deg,
+				linear-gradient
+				(90deg,
 				rgba(var(--color-primary-rgb), 1) 0%,
 				rgba(var(--color-secondary-rgb), 1) 100%);
 			content: '';

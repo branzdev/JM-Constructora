@@ -2,24 +2,12 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv').config();
+const html = require('../utilities/htmlEmailTemplate');
 
 router.post('/', async function (req, res, next) {
 	const { name, phone, email, subject, message } = req.body;
 
-	const htmlBody = `
-	<h1> ${subject ? subject : 'Cotización de Servicio'} </h1>
-	<ul>
-		<li>
-			Nombre: ${name}
-		</li>
-		<li>
-			Correo: ${email}
-		</li>
-		${phone && `<li>Teléfono: ${phone}</li>`}
-	</ul>
-	<p>${message}</p>
-	<a style="background: #2a56ac; color: #fafafa; text-decoration: none; padding: 15px; border-radius: 8px; display: inline-block; margin-top: 15px;" href="mailto:${email}">Responder</a>
-	`;
+	const htmlBody = html.htmlEmailTemplate(name, email, phone, subject, message);
 
 	// create reusable transporter object using the default SMTP transport
 	let transporter = nodemailer.createTransport({
