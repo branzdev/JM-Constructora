@@ -7,7 +7,7 @@
 		"server": "cd ./bin && nodemon www",
 		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
 		"start": "cd ./bin && node www",
-		"heroku-postbuild": "cd client && npm install && npm run build"
+		"heroku-postbuild": "cd client && yarn install && yarn build"
 	},
 	"dependencies": {
 		"concurrently": "^5.3.0",
