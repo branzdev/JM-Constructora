@@ -140,7 +140,7 @@ function htmlEmailTemplate(name, email, phone, subject, message) {
 												style="height: 100px; width: 100px; padding: 0 0 0 15px"
 											>
 												<img
-													src="https://res.cloudinary.com/bmongemendez/image/upload/dpr_auto,h_100,w_auto,c_fill,f_auto,q_auto/v1611538296/jmendezconstructorasa/logoContact"
+													src="https://res.cloudinary.com/bmongemendez/image/upload/dpr_auto,h_100,w_100,c_fill,f_auto,q_auto/v1611538296/jmendezconstructorasa/logoContact"
 													class="imageFix"
 													alt="Logo JMéndez Constructora"
 													border="0"
@@ -150,6 +150,7 @@ function htmlEmailTemplate(name, email, phone, subject, message) {
 														font-family: Arial;
 														color: #4a4a4a;
 														font-size: 28px;
+														width: 100px;
 														height: auto;
 													"
 												/>
@@ -199,8 +200,8 @@ function htmlEmailTemplate(name, email, phone, subject, message) {
 											line-height: 30px;
 											text-align: justify;
 											width: 100%;
-											word-break: break-all;
 											white-space: normal;
+											word-break: break-all;
 										"
 									>
 									${message}

@@ -21,6 +21,7 @@
 
 		@include max-breakpoint('medium') {
 			grid-template-columns: 1fr;
+			height: auto;
 		}
 	}
 
@@ -46,7 +47,7 @@
 
 	.constructionServices__image {
 		height: 260px;
-		object-fit: cover;
+		object-fit: contain;
 		object-position: center;
 		width: 300px;
 
