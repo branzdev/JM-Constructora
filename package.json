@@ -5,7 +5,8 @@
 	"scripts": {
 		"client": "cd ./client && yarn start",
 		"server": "cd ./bin && nodemon www",
-		"start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+		"start": "cd ./bin && node www",
 		"heroku-postbuild": "cd client && npm install && npm run build"
 	},
 	"dependencies": {

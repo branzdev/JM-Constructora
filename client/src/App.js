@@ -17,24 +17,24 @@ import ImageGalleryPage from './components/ImageGalleryPage/ImageGalleryPage';
 function App() {
 	return (
 		<div className="App">
-			<ScrollProgressBar />
-			<Sidebar />
-			<Navbar />
-			<Route exact path="/">
-				<Home />
-				<Proyects />
-				<ServicesSection />
-				<ImageGallery />
-				<About />
-				<Contact />
-			</Route>
-			<Route path="/services">
-				<ServicesPage />
-			</Route>
-			<Route path="/imageGallery">
-				<ImageGalleryPage />
-			</Route>
 			<Route path="/">
+				<ScrollProgressBar />
+				<Sidebar />
+				<Navbar />
+				<Route exact path="/">
+					<Home />
+					<Proyects />
+					<ServicesSection />
+					<ImageGallery />
+					<About />
+					<Contact />
+				</Route>
+				<Route path="/services">
+					<ServicesPage />
+				</Route>
+				<Route path="/imageGallery">
+					<ImageGalleryPage />
+				</Route>
 				<Footer />
 			</Route>
 		</div>

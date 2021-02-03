@@ -10,14 +10,15 @@ const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
 var usersRouter = require('./routes/users');
 var testAPIRouter = require('./routes/testAPI'); */
 var sendMailRouter = require('./routes/sendMail');
+let defaultRouter = require('./routes/default');
 
 var app = express();
 
-app.listen(process.env.PORT || 5000);
+let PORT = process.env.PORT;
 
 // view engine setup
-/* app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade'); */
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(cors());
 app.use(logger('dev'));
@@ -29,9 +30,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Anything that doesn't match the above, send back index.html
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+app.use('*', defaultRouter);
 
 /* app.use('/', indexRouter);
 app.use('/users', usersRouter);

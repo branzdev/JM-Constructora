@@ -33,8 +33,7 @@
 	}
 
 	.sidebar__background {
-		background:
-			transparent
+		background: transparent
 			url('https://res.cloudinary.com/bmongemendez/image/upload/w_700,h_1400,dpr_auto,c_fill,f_auto,q_auto/v1611538303/jmendezconstructorasa/homeBackground')
 			center/cover no-repeat;
 		box-shadow: var(--box-shadow);
@@ -199,7 +198,7 @@
 			display: flex;
 			font: var(--font-normal__raleway);
 			height: 100%;
-			padding: 25px 0;
+			padding: 25px;
 			text-decoration: none;
 
 			@include max-breakpoint('large') {
@@ -210,12 +209,12 @@
 				padding: 10px 0;
 			}
 
-			&:hover {
-				background: rgba(var(--color-tertiary-rgb), 0.1);
-			}
-
 			@media screen and(max-height: 515px) {
 				padding: 1px 0;
+			}
+
+			&:hover {
+				background: rgba(var(--color-tertiary-rgb), 0.1);
 			}
 		}
 

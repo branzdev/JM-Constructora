@@ -5,6 +5,7 @@
 	width: 100%;
 	position: relative;
 	background: var(--color-tertiary);
+	bottom: 0;
 
 	@include max-breakpoint('xxlarge') {
 		height: 700px;

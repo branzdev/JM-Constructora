@@ -165,7 +165,7 @@ export default function Footer() {
 				<div className="footer__content-location-container">
 					<div className="footer__content-location-background"></div>
 					<div className="footer__content-location-map">
-						{/* <GoogleMap /> */}
+						<GoogleMap />
 					</div>
 				</div>
 			</div>
