@@ -15,7 +15,6 @@ export default function ImageGalleryImage(props) {
 
 		function resized() {
 			// Haven't resized in 100ms
-			console.log('resized');
 			setHeight(Math.round(image.getBoundingClientRect().height));
 		}
 

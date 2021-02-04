@@ -20,8 +20,6 @@ export default function Home(props) {
 				.getBoundingClientRect().height
 		);
 
-		console.log(homeImageHeihgt);
-
 		//GSAP ANIMATION
 		const tl = gsap.timeline({
 			defaults: {
