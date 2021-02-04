@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
+require('newrelic');
 
 /* var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
