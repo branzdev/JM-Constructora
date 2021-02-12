@@ -9,12 +9,12 @@ import Button from '../Button/Button';
 export default function Home(props) {
 	const homeRef = useRef();
 
-	const [homeImageHeihgt, setHomeImageHeihgt] = useState(691);
+	const [homeImageHeight, setHomeImageHeight] = useState(691);
 
 	useEffect(() => {
 		const homeElement = homeRef.current;
 
-		setHomeImageHeihgt(
+		setHomeImageHeight(
 			homeElement
 				.querySelector('.home__image-container')
 				.getBoundingClientRect().height
@@ -80,7 +80,7 @@ export default function Home(props) {
 				duration: 0,
 			});
 		}
-	}, [homeImageHeihgt]);
+	}, [homeImageHeight]);
 
 	/* 	const getHeight = (containerElement) => {
 		const container = homeElement.querySelector(`.${containerElement}`);
@@ -107,7 +107,7 @@ export default function Home(props) {
 					loading="lazy"
 					alt="Excavadora"
 					width="auto"
-					height={homeImageHeihgt}
+					height={homeImageHeight}
 					crop="fill"
 					dpr="auto"
 					quality="auto"

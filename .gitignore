@@ -42,3 +42,7 @@ newrelic_agent.log
 
 # Local History for Visual Studio Code
 .history/
+
+#-----------------KEYS--------------------
+*.key
+*.pem
